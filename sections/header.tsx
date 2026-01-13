@@ -9,7 +9,7 @@ const HeaderBar = () => {
 
     return (
         <header className="mx-auto mt-4 top-1 sticky z-50">
-            <div className="relative flex items-center justify-between rounded-xl bg-white text-black p-2 px-4 dark:bg-slate-800 dark:text-white shadow-lg">
+            <div className="relative flex items-center justify-between rounded-xl bg-white text-black p-2 px-4 dark:bg-[#1f1f1f] dark:text-white shadow-lg">
                 {/* LEFT */}
                 <div className="font-sans text-md md:text-lg text-black dark:text-white">
                     <Link href="/">Sarvan Kumar</Link>

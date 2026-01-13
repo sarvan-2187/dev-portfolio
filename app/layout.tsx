@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Saira, JetBrains_Mono } from "next/font/google";
+import { Bebas_Neue, Google_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 
@@ -9,8 +9,8 @@ const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
 });
 
-const saira = Saira({
-  variable: "--font-saira",
+const googleSans = Google_Sans({
+  variable: "--font-google-sans",
   subsets: ["latin"],
 });
 
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body
-        className={`${bebasNeue.variable} ${saira.variable} ${jetBrainsMono.variable} antialiased`}
+        className={`${bebasNeue.variable} ${googleSans.variable} ${jetBrainsMono.variable} antialiased`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
