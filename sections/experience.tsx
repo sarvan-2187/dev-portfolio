@@ -43,7 +43,7 @@ const ExperienceSection = () => {
                                       <li>Implemented Role Based Access Control {"(RBAC)"} for event management.</li>
                                       <li>Implemented Admin based event approval and streamlined the event management process.</li>
                                   </ul>
-                                  <Button variant="default" className='p-2 mt-2' rel="noopener noreferrer">
+                                  <Button variant="ghost" className='p-2 mt-2' rel="noopener noreferrer">
                                       <a href="https://neuronix-avv.vercel.app/" target="_blank" rel="noopener noreferrer">View Website</a>
                                   </Button>
                               </motion.div>

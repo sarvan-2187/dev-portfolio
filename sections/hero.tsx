@@ -7,11 +7,11 @@ import Socials from './socials';
 
 const HeroSection = () => {
   return (
-    <div className='font-sans flex flex-col gap-4 md:h-[80vh] mt-12 md:mt-18'>
+    <div className='font-sans flex flex-col gap-4 md:h-[80vh] mt-12 md:mt-16'>
       <div className="flex flex-row items-center justify-between text-white p-2 rounded-lg gap-4">
         <div className='max-w-xl font-bold inline flex-col gap-2 text-black dark:text-white font-sans text-3xl md:text-7xl'>
           Hi I'm Sarvan!
-          <div className='font-medium max-w-xs md:max-w-xl text-xs md:text-xl text-gray-700 dark:text-white/70'>
+          <div className='mt-4 font-medium max-w-xs md:max-w-xl text-xs md:text-xl text-gray-700 dark:text-white/70'>
             I build reliable, modern web applications with a focus on clarity, performance, and real-world impact.
           </div>
         </div>
