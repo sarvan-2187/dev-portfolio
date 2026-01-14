@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { ThemeToggle } from "@/app/theme-toggle";
 import { HiMenu, HiX } from "react-icons/hi";
+import { VscVerifiedFilled } from "react-icons/vsc";
 
 const HeaderBar = () => {
     const [open, setOpen] = useState(false);
@@ -11,12 +12,12 @@ const HeaderBar = () => {
         <header className="mx-auto mt-4 top-1 sticky z-50">
             <div className="relative flex items-center justify-between rounded-xl bg-white text-black p-2 px-4 dark:bg-[#1f1f1f] dark:text-white shadow-lg">
                 {/* LEFT */}
-                <div className="font-sans text-md md:text-lg text-black dark:text-white">
-                    <Link href="/">Sarvan Kumar</Link>
+                <div className="font-sans font-bold text-md md:text-lg text-black dark:text-white">
+                    <Link href="/">Sarvan Kumar <VscVerifiedFilled className='text-lg inline text-blue-500 mb-1' /></Link>
                 </div>
 
                 {/* DESKTOP NAV */}
-                <nav className="hidden md:block font-mono text-md md:text-lg">
+                <nav className="hidden md:block font-sans font-bold text-md md:text-lg">
                     <ul className="flex items-center gap-4 px-2">
                         <li><Link href="/projects" className="text-gray-700 dark:text-white hover:text-black dark:hover:text-blue-300 transition">{"<"}projects{"/>"}</Link></li>
                         <li><Link href="/certifications" className="text-gray-700 dark:text-white hover:text-black dark:hover:text-blue-300 transition">{"<"}certifications{"/>"}</Link></li>
@@ -39,7 +40,7 @@ const HeaderBar = () => {
 
                 {/* MOBILE MENU */}
                 {open && (
-                    <div className="font-mono absolute right-0 top-full mt-2 w-50 rounded-xl bg-white p-3 shadow-lg dark:bg-slate-800 md:hidden">
+                    <div className="border-1 border-black dark:border-white font-sans font-bold absolute right-0 top-full mt-2 w-50 rounded-xl bg-white p-3 shadow-lg dark:bg-[#1f1f1f] md:hidden">
                         <ul className="flex flex-col gap-3 text-md text-black dark:text-white">
                             <li>
                                 <Link href="/projects" onClick={() => setOpen(false)}>{"<"}projects{"/>"}</Link>
