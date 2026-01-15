@@ -7,10 +7,10 @@ import Socials from './socials';
 
 const HeroSection = () => {
   return (
-    <div className='font-sans flex flex-col gap-4 md:h-[80vh] mt-12 md:mt-16'>
+    <div className='font-sans flex flex-col gap-4 md:h-[80vh] mt-12 md:mt-14 md:mb-8'>
       <div className="flex flex-row items-center justify-between text-white p-2 rounded-lg gap-4">
-        <div className='max-w-xl font-bold inline flex-col gap-2 text-black dark:text-white font-sans text-3xl md:text-7xl'>
-          Hi I'm Sarvan!
+        <div className='max-w-xl font-bold inline flex-col gap-2 text-black dark:text-white font-sans text-3xl md:text-5xl'>
+          Hi I'm Sarvan<span className='hidden md:inline'> Kumar</span>!
           <div className='mt-4 font-medium max-w-xs md:max-w-xl text-xs md:text-xl text-gray-700 dark:text-white/70'>
             I build reliable, modern web applications with a focus on clarity, performance, and real-world impact.
           </div>
@@ -21,7 +21,7 @@ const HeroSection = () => {
         </div>
       </div>
       <AboutSection />
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-10 mb-12'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mb-8'>
         <SkillComponent />
         <Socials />
       </div>

@@ -13,7 +13,7 @@ const ExperienceSection = () => {
 
     
   return (
-    <div className='p-2 mb-4'>
+    <div className='p-2 mb-8'>
           <p className='font-sans font-bold text-2xl mb-4 md:text-xl text-black dark:text-white'>Experience</p>
           <div className='space-y-4'>
               {/* CARD */}

@@ -5,7 +5,7 @@ import { ThemeToggle } from "@/app/theme-toggle";
 import { HiMenu, HiX } from "react-icons/hi";
 import { VscVerifiedFilled } from "react-icons/vsc";
 
-const HeaderBar = () => {
+const ProjectsHeaderBar = () => {
     const [open, setOpen] = useState(false);
 
     return (
@@ -19,7 +19,7 @@ const HeaderBar = () => {
                 {/* DESKTOP NAV */}
                 <nav className="hidden md:block font-sans font-bold text-md md:text-lg">
                     <ul className="flex items-center gap-4 px-2">
-                        <li><Link href="/projects" className="text-gray-700 dark:text-white hover:text-black dark:hover:text-blue-300 transition">Projects</Link></li>
+                        <li><Link href="/" className="text-gray-700 dark:text-white hover:text-black dark:hover:text-blue-300 transition">Home</Link></li>
                         <li><Link href="/certifications" className="text-gray-700 dark:text-white hover:text-black dark:hover:text-blue-300 transition">Certifications</Link></li>
                         <li><Link href="/contact" className="text-gray-700 dark:text-white hover:text-black dark:hover:text-blue-300 transition">Contact</Link></li>
                         <li className="flex items-center cursor-pointer"><ThemeToggle /></li>
@@ -43,7 +43,7 @@ const HeaderBar = () => {
                     <div className="font-sans font-bold absolute right-0 top-full mt-2 w-50 rounded-xl bg-white p-3 shadow-lg dark:bg-[#1f1f1f] md:hidden">
                         <ul className="flex flex-col gap-3 text-md text-black dark:text-white">
                             <li>
-                                <Link href="/projects" onClick={() => setOpen(false)}>Projects</Link>
+                                <Link href="/" onClick={() => setOpen(false)}>Home</Link>
                             </li>
                             <li>
                                 <Link href="/certifications" onClick={() => setOpen(false)}>Certifications</Link>
@@ -60,4 +60,4 @@ const HeaderBar = () => {
     );
 };
 
-export default HeaderBar;
+export default ProjectsHeaderBar;

@@ -1,15 +1,28 @@
 import HeaderBar from "@/sections/header";
 import HeroSection from "@/sections/hero";
-import Image from "next/image";
-import { ThemeToggle } from "./theme-toggle";
 import ExperienceSection from "@/sections/experience";
+import EducationSection from "@/sections/education";
+import AchievementsSection from "@/sections/achievements";
+import { Banner } from "@/components/Banner";
+import FeaturedProjectsSection from "@/sections/featuredprojects";
+import FooterSection from "@/sections/footer";
+import GithubContributions from "@/components/githubContributions";
+import { Testimonials } from "@/components/testimonials";
 
-export default function Home() {
+export default async function Home() {
+  await new Promise((r) => setTimeout(r, 3000));
   return (
     <div className="px-4 lg:px-58">
-      <HeaderBar/>
+      <HeaderBar />
       <HeroSection />
-      <ExperienceSection/>
+      <FeaturedProjectsSection />
+      <Testimonials />
+      <GithubContributions />
+      <ExperienceSection />
+      <EducationSection />
+      <AchievementsSection />
+      <Banner />
+      <FooterSection />
     </div>
   );
 }

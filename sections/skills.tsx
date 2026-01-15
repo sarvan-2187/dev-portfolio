@@ -3,7 +3,6 @@ const techStack = [
   "Next.js",
   "Tailwind CSS",
   "Python",
-  "Data Structures & Algorithms",
   "Git",
   "MySQL",
   "Github",
@@ -11,7 +10,13 @@ const techStack = [
   "C++",
   "JavaScript",
   "TypeScript",
-  "C"
+  "C",
+  "Linux",
+  "Data Structures",
+  "Algorithms",
+  "Neon DB",
+  "Postman API",
+  "Java"
 ];
 
 export const SkillComponent = () => {
@@ -23,7 +28,7 @@ export const SkillComponent = () => {
             <span
               key={tech}
               className="
-              rounded-md px-2 py-1 text-xs font-mono
+              rounded-md px-2 py-1 text-xs font-sans font-semibold
               bg-black text-white 
               dark:bg-white dark:text-black
               border border-white/10 dark:border-white/5
