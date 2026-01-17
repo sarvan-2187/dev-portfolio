@@ -4,7 +4,6 @@ import Link from "next/link";
 import { ThemeToggle } from "@/app/theme-toggle";
 import { HiMenu, HiX } from "react-icons/hi";
 import { VscVerifiedFilled } from "react-icons/vsc";
-import { MdHomeFilled } from "react-icons/md";
 import { LiaCertificateSolid } from "react-icons/lia";
 import { BsFillGridFill } from "react-icons/bs";
 import { AiOutlineMessage } from "react-icons/ai";

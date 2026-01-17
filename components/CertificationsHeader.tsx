@@ -4,6 +4,12 @@ import Link from "next/link";
 import { ThemeToggle } from "@/app/theme-toggle";
 import { HiMenu, HiX } from "react-icons/hi";
 import { VscVerifiedFilled } from "react-icons/vsc";
+import { motion } from "framer-motion";
+import { MdHomeFilled } from "react-icons/md";
+import { BsGridFill } from "react-icons/bs";
+import { AiOutlineMessage } from "react-icons/ai";
+
+
 
 const CertificationsHeaderBar = () => {
     const [open, setOpen] = useState(false);
@@ -40,19 +46,35 @@ const CertificationsHeaderBar = () => {
 
                 {/* MOBILE MENU */}
                 {open && (
-                    <div className="font-sans font-bold absolute right-0 top-full mt-2 w-50 rounded-xl bg-white p-3 shadow-lg dark:bg-[#1f1f1f] md:hidden">
+                    <motion.div
+                        initial={{
+                            opacity: 0,
+                            y: 0,
+                            filter: "blur(14px)",
+                        }}
+                        whileInView={{
+                            opacity: 1,
+                            y: 0,
+                            filter: "blur(0px)",
+                        }}
+                        viewport={{ once: true }}
+                        transition={{
+                            duration: 0.6,
+                            ease: "easeOut",
+                        }}
+                        className="font-sans font-bold absolute right-0 top-full mt-2 w-50 rounded-xl bg-white p-3 shadow-lg dark:bg-[#1f1f1f] md:hidden">
                         <ul className="flex flex-col gap-3 text-md text-black dark:text-white">
-                            <li>
-                                <Link href="/" onClick={() => setOpen(false)}>Home</Link>
+                            <li className="flex gap-2 items-center">
+                                <MdHomeFilled className="text-sm" /><Link href="/" onClick={() => setOpen(false)}>Home</Link>
                             </li>
-                            <li>
-                                <Link href="/projects" onClick={() => setOpen(false)}>Projects</Link>
+                            <li className="flex gap-2 items-center">
+                                <BsGridFill className="text-sm" /><Link href="/projects" onClick={() => setOpen(false)}>Projects</Link>
                             </li>
-                            <li>
-                                <Link href="/contact" onClick={() => setOpen(false)}>Contact</Link>
+                            <li className="flex gap-2 items-center">
+                                <AiOutlineMessage className="text-sm" /><Link href="/contact" onClick={() => setOpen(false)}>Contact</Link>
                             </li>
                         </ul>
-                    </div>
+                    </motion.div>
                 )}
 
             </div>
