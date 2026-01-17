@@ -82,10 +82,10 @@ export default function ContactPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className="mt-4 flex justify-center bg-white dark:bg-[#1a1a1a] rounded-xl">
+                className="mt-4 md:max-w-4xl mx-auto flex justify-center bg-white dark:bg-[#1a1a1a] rounded-xl">
                 <form
                     onSubmit={handleSubmit}
-                    className="w-full space-y-4 p-6 rounded-xl md:max-w-4xl shadow-xl"
+                    className="w-full space-y-4 p-6 rounded-xl  shadow-xl"
                 >
                     <h1 className="text-3xl font-bold flex items-center gap-2">
                         Get in Touch <LuMessageSquareShare className="text-[25px] font-bold text-ble-600 dark:text-blue-300"/>
@@ -142,7 +142,7 @@ export default function ContactPage() {
                     </button>
                 </form>
             </motion.div>
-            <div className="pb-12 md:max-w-4xl mx-auto">
+            <div className="pb-12 md:max-w-4xl mx-auto bg-white dark:bg-black">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
