@@ -50,7 +50,7 @@ const GithubContributions = () => {
                 }}
                 viewport={{ once: true }}
                 transition={{
-                    duration: 0.6,
+                    duration: 1.0,
                     ease: "easeOut",
                 }}
                 className="p-2">

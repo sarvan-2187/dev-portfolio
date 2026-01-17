@@ -10,7 +10,6 @@ const words =
 export function Banner() {
     return (
         <div className="p-2 mb-8">
-            <p className='font-sans font-bold text-2xl mb-4 md:text-xl text-black dark:text-white'>My Mindset !</p>
             <span className="text-3xl"><FaQuoteLeft /></span>
             <TextGenerateEffect
                 words={words}
