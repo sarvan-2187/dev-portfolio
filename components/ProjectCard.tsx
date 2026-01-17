@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import { FaSquareArrowUpRight } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 
 type Project = {
@@ -15,7 +16,11 @@ type Project = {
 
 export default function ProjectCard({ title, image, link, github }: Project) {
     return (
-        <div
+        <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
             className="group relative w-full overflow-hidden rounded-2xl
                        border border-black/10 dark:border-white/5
                        bg-white dark:bg-neutral-900 shadow-xl
@@ -74,6 +79,6 @@ export default function ProjectCard({ title, image, link, github }: Project) {
                     )}
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }

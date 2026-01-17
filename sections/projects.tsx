@@ -1,11 +1,17 @@
 import ProjectCardDetailed from '@/components/ProjectCardDetailed';
+import { StaggerTitle } from '@/components/StaggerTitle';
+import { TextGenerateEffect } from '@/components/ui/text-generate-effect';
 import { PiBarricadeFill } from "react-icons/pi";
 
 const ProjectsSection = () => {
   return (
       <div className='font-sans my-4 p-2'>
-      <h2 className='text-center p-2 font-bold text-3xl mb-1'>{"<"}My_Works{"/>"}</h2>
-        <p className='font-medium text-center mb-6 text-gray-600'>See all of my projects here</p>
+            <StaggerTitle
+                          text="<My_Works/>"
+                          className="text-3xl md:text-4xl mb-4 font-bold text-center"
+            />
+              <TextGenerateEffect words="Check out my projects" highlight='projects' className="font-medium text-center mb-6 text-gray-600 tracking-tighter" />
+            
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-4">
               <ProjectCardDetailed
                 title="Stumps & Stories"
