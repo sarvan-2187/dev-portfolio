@@ -3,7 +3,7 @@
 import { SubscribeFooterInput } from "@/components/FooterSubscribe";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
-import { FaRegCopyright, FaRss } from "react-icons/fa";
+import { FaRegCopyright, FaRobot, FaRss } from "react-icons/fa";
 import { FaRegFaceSmileBeam, } from "react-icons/fa6";
 
 
@@ -66,7 +66,15 @@ const FooterSection = () => {
                             RSS Feed
                         </a>
                     </Button>
+
+                    <Button variant="outline" asChild>
+                        <a href="/llms.txt" target="_blank" rel="noopener noreferrer">
+                            <FaRobot className="mr-2 text-gray-600 dark:text-gray-300" />
+                            llms.txt
+                        </a>
+                    </Button>
                 </div>
+
             </div>
         </footer>
     );

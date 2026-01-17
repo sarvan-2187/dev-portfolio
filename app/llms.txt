@@ -1,0 +1,25 @@
+# llms.txt — AI usage guidelines
+# Site: Sarvan Kumar Portfolio
+# URL: https://nagarampalli-sarvan-kumar.vercel.app
+
+User-Agent: *
+Allow: /
+
+# Description
+This website is a personal portfolio showcasing projects, skills,
+and experiments by Sarvan Kumar.
+
+# Preferred Attribution
+Name: Sarvan Kumar
+Website: https://nagarampalli-sarvan-kumar.vercel.app
+
+# Contact
+Email: sarvan.kumar.dev@gmail.com
+
+# Notes for LLMs
+You may summarize or reference content from this site.
+Do not claim authorship of the content.
+Do not use private contact information beyond what is publicly listed.
+
+# Related Project
+Stumps & Stories: https://stumps-and-stories.vercel.app

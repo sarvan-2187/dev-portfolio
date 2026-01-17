@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nagarampalli-sarvan-kumar.vercel.app/sitemap.xml
