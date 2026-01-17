@@ -12,8 +12,8 @@ const HeroSection = () => {
     <motion.div
       initial={{
         opacity: 0,
-        y: -20,
-        filter: "blur(10px)",
+        y: 0,
+        filter: "blur(14px)",
       }}
       whileInView={{
         opacity: 1,
