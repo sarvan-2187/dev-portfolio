@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { FaRegCopyright } from "react-icons/fa";
 import { FaRegFaceSmileBeam, } from "react-icons/fa6";
@@ -53,6 +54,17 @@ const FooterSection = () => {
                     <div className="flex flex-col justify-end md:items-end items-start gap-1 text-xs opacity-80">
                         Built with Next.js and Tailwind CSS. Hosted on Vercel.
                     </div>
+                </div>
+                <div className="py-8 flex flex-row items-center justify-center">
+                    <Button variant={"outline"} asChild className="mt-4">
+                        <a href="/not-found">Not Found</a>
+                    </Button>
+                    <Button variant={"outline"} asChild className="mt-4">
+                        <a href="/not-found">Not Found</a>
+                    </Button>
+                    <Button variant={"outline"} asChild className="mt-4">
+                        <a href="/not-found">Not Found</a>
+                    </Button>
                 </div>
             </div>
         </footer>
