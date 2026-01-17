@@ -66,7 +66,7 @@ export default function ContactPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className="mt-12 md:mt-4 flex justify-center bg-white dark:bg-[#1a1a1a] rounded-xl">
+                className="mt-4 flex justify-center bg-white dark:bg-[#1a1a1a] rounded-xl">
                 <form
                     onSubmit={handleSubmit}
                     className="w-full space-y-4 p-6 rounded-xl md:max-w-4xl shadow-xl"
