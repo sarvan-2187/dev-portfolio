@@ -9,7 +9,23 @@ import { PiCertificate } from "react-icons/pi";
 
 const CertificationsPage = () => {
   return ( 
-    <div className="h-screen font-sans px-4 lg:px-48">
+    <motion.div
+      initial={{
+        opacity: 0,
+        y: -20,
+        filter: "blur(10px)",
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        filter: "blur(0px)",
+      }}
+      viewport={{ once: true }}
+      transition={{
+        duration: 0.6,
+        ease: "easeOut",
+      }}
+      className="h-screen font-sans px-4 lg:px-48">
       <CertificationsHeaderBar />
 
       <div className="font-sans my-4 p-2">
@@ -125,7 +141,7 @@ const CertificationsPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
