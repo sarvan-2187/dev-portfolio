@@ -52,15 +52,13 @@ export default function ContactPage() {
     return (
         <div className="h-screen font-sans px-4 lg:px-48">
             <ContactHeaderBar />
-            <div className="mt-4">
+            <div className="mt-8 md:mt-4">
                 <StaggerTitle
                     text="<Contact_Me />"
-                    className="text-4xl font-bold text-center"
+                    className="text-3xl md:text-4xl font-bold text-center mb-4"
                 />
-    
-                <p className="">
-                    <TextGenerateEffect words="Let's connect and build something meaningful" className="font-medium text-center mb-6 text-gray-600" />
-                </p>
+                <TextGenerateEffect words="Let's connect and build!" className="text-xs text-center mb-2 text-gray-600" />
+                
             </div>
 
             

@@ -1,4 +1,9 @@
+"use client";
+
+import { StaggerTitle } from '@/components/StaggerTitle';
 import { Button } from '@/components/ui/button'
+import { TextGenerateEffect } from '@/components/ui/text-generate-effect';
+import { motion } from 'framer-motion';
 import Image from 'next/image'
 import { PiCertificate } from "react-icons/pi";
 
@@ -6,10 +11,18 @@ import { PiCertificate } from "react-icons/pi";
 const CertificationsSection = () => {
   return (
       <div className="font-sans my-4 p-2">
-          <h2 className="font-sans text-center p-2 font-bold text-3xl mb-1">{"<"}My_Certifications{"/>"}</h2>
-            <p className="font-medium text-center mb-6 text-gray-600">All of my professional certifications in one place</p>
+                <StaggerTitle
+                    text="<My_Certifications/>"
+                    className="text-3xl md:text-4xl mb-4 font-bold text-center"
+      />
+        <TextGenerateEffect words="All of my professional certifications in one place" className="font-medium text-center mb-6 text-gray-600 tracking-tighter" />
+      
             <div className="space-y-4">
-              <div className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-2 rounded-lg shadow-lg'>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-2 rounded-lg shadow-lg'>
                   <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full border-4 border-slate-100 bg-slate-200 dark:bg-[#2f2f2f] dark:border-[#1f1f1f] p-1 flex items-center justify-center'>
                     <Image src="https://ik.imagekit.io/sarvan/Portfolio/gemini.webp" alt="Gemini Logo" width={50} height={50} className="object-contain rounded-full" draggable={false} />
                   </div> 
@@ -22,9 +35,13 @@ const CertificationsSection = () => {
                       </Button>
                     </div>
                   </div> 
-                </div>
+                </motion.div>
               
-               <div className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-2 rounded-lg shadow-lg'>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-2 rounded-lg shadow-lg'>
                   <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full border-4 border-slate-100 bg-slate-200 dark:bg-[#2f2f2f] dark:border-[#1f1f1f] p-1 flex items-center justify-center'>
                     <Image src="https://ik.imagekit.io/sarvan/Portfolio/databricks.jpg" alt="Databricks Logo" width={50} height={50} className="object-contain rounded-full" draggable={false} />
                   </div> 
@@ -37,9 +54,13 @@ const CertificationsSection = () => {
                       </Button>
                     </div>
                   </div> 
-              </div>
+              </motion.div>
         
-              <div className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-2 rounded-lg shadow-lg'>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-2 rounded-lg shadow-lg'>
                 <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full border-4 border-slate-100 bg-slate-200 dark:bg-[#2f2f2f] dark:border-[#1f1f1f] p-1 flex items-center justify-center'>
                   <Image src="https://ik.imagekit.io/sarvan/Portfolio/vercel.png" alt="Vercel Logo" width={50} height={50} className="object-contain rounded-full" draggable={false} />
                 </div>
@@ -52,9 +73,13 @@ const CertificationsSection = () => {
                     </Button>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-2 rounded-lg shadow-lg'>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-2 rounded-lg shadow-lg'>
                 <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full border-4 border-slate-100 bg-slate-200 dark:bg-[#2f2f2f] dark:border-[#1f1f1f] p-1 flex items-center justify-center'>
                   <Image src="https://ik.imagekit.io/sarvan/Portfolio/postman.jpg" alt="Postman Logo" width={50} height={50} className="object-contain rounded-full" draggable={false} />
                 </div>
@@ -67,11 +92,15 @@ const CertificationsSection = () => {
                     </Button>
                   </div>
                 </div>
-              </div>
+              </motion.div>
       
-            <div className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-2 rounded-lg shadow-lg'>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-2 rounded-lg shadow-lg'>
               <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full border-4 border-slate-100 bg-slate-200 dark:bg-[#2f2f2f] dark:border-[#1f1f1f] p-1 flex items-center justify-center'>
-            <Image src="https://ik.imagekit.io/sarvan/Portfolio/hubspot_academy_logo.jpg" alt="HubSpot Academy Logo" width={50} height={50} className="object-contain rounded-full" draggable={false} />
+                <Image src="https://ik.imagekit.io/sarvan/Portfolio/hubspot_academy_logo.jpg" alt="HubSpot Academy Logo" width={50} height={50} className="object-contain rounded-full" draggable={false} />
               </div>
               <div className='flex flex-col min-w-0'>
                 <p className='font-sans font-bold text-black dark:text-white text-lg'>SEO Expert</p>
@@ -82,7 +111,7 @@ const CertificationsSection = () => {
                   </Button>
                 </div>
               </div>
-              </div>
+              </motion.div>
               <div className='bg-[#ffffff] dark:bg-[#131313] flex flex-col items-center justify-center gap-4 p-2 rounded-lg shadow-lg'>
                 <PiCertificate size={100} className=" text-gray-600 dark:text-gray-400" />
                 <div className='flex flex-col text-center min-w-0 tracking-wide'>

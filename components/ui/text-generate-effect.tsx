@@ -40,7 +40,7 @@ export const TextGenerateEffect = ({
 
   return (
     <div className={cn("font-bold", className)}>
-      <div className="mt-4 text-2xl leading-snug tracking-wide text-black dark:text-white">
+      <div className="mt-4 text-black dark:text-white">
         <motion.div ref={scope}>
           {wordsArray.map((word, idx) => {
             const isHighlighted =

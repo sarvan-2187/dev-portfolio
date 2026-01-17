@@ -15,6 +15,7 @@ export function Banner() {
             <TextGenerateEffect
                 words={words}
                 highlight="Hardik Pandya"
+                className="tracking-wide leading-snug"
             />
             <span className="flex justify-end text-3xl"><FaQuoteRight /></span>
         </div>
