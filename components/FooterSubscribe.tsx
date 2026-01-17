@@ -36,7 +36,7 @@ export function SubscribeFooterInput() {
                 return;
             }
 
-            toast.success("Subscribed to Newsletter successfully! 📬");
+            toast.success("Subscribed to Newsletter successfully!");
             setEmail("");
         } catch (err) {
             toast.error("Something went wrong. Please try again.");
