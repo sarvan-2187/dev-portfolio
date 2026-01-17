@@ -40,7 +40,7 @@ export default function RootLayout({
       <body
         className={`${bebasNeue.variable} ${googleSans.variable} ${jetBrainsMono.variable} antialiased`}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light">
           {children}
           <Toaster />
         </ThemeProvider>
