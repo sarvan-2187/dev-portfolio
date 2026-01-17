@@ -26,7 +26,7 @@ const HeroSection = () => {
             }}
             viewport={{ once: true }}
             transition={{
-              duration: 0.3,
+              duration: 0.6,
               ease: "easeOut",
             }}
             className='mt-4 font-medium max-w-xs md:max-w-xl text-xs md:text-xl text-gray-700 dark:text-white/70'>
@@ -46,7 +46,7 @@ const HeroSection = () => {
           }}
           viewport={{ once: true }}
           transition={{
-            duration: 0.3,
+            duration: 0.6,
             ease: "easeOut",
           }}
           className='flex items-center border-4 border-slate-200 dark:border-[#2f2f2f] justify-center rounded-full'>

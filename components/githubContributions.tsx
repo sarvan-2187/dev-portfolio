@@ -3,6 +3,7 @@
 import { GitHubCalendar } from "react-github-calendar";
 import { useTheme } from "next-themes";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const GithubContributions = () => {
     const { theme } = useTheme();
@@ -36,7 +37,23 @@ const GithubContributions = () => {
                 </select>
             </div>
 
-            <div className="p-2">
+            <motion.div
+                initial={{
+                    opacity: 0,
+                    y: 0,
+                    filter: "blur(10px)",
+                }}
+                whileInView={{
+                    opacity: 1,
+                    y: 0,
+                    filter: "blur(0px)",
+                }}
+                viewport={{ once: true }}
+                transition={{
+                    duration: 0.6,
+                    ease: "easeOut",
+                }}
+                className="p-2">
                 <GitHubCalendar
                     username="sarvan-2187"
                     year={year}
@@ -57,7 +74,7 @@ const GithubContributions = () => {
                     }}
                     blockSize={15}
                 />
-            </div>
+            </motion.div>
         </div>
     );
 };
