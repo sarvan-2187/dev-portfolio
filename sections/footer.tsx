@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { FaRegCopyright } from "react-icons/fa";
-import { FaRegFaceSmileBeam, FaCircleUser } from "react-icons/fa6";
+import { FaRegFaceSmileBeam, } from "react-icons/fa6";
 
 
 const FooterSection = () => {
@@ -40,11 +40,11 @@ const FooterSection = () => {
 
                         {visits !== null && (
                             <div className="mb-2 flex items-center gap-1">
-                                <FaCircleUser className="text-xs" /> You are visitor number{"`"}
+                                You are visitor number
                                 <span className="font-bold text-blue-600 dark:text-blue-300">
-                                    {visits.toLocaleString()}
+                                    {"'"}{visits.toLocaleString()}{"'"}
                                 </span>
-                                {"`"} to my portfolio !
+                                 to my portfolio !
                             </div>
                         )}
                     </div>

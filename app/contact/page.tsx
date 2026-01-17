@@ -54,7 +54,7 @@ export default function ContactPage() {
             initial={{
                 opacity: 0,
                 y: -20,
-                filter: "blur(10px)",
+                filter: "blur(14px)",
             }}
             whileInView={{
                 opacity: 1,

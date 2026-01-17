@@ -3,11 +3,28 @@
 import React, { useEffect, useState } from "react";
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 import { Quote } from "lucide-react";
+import { motion } from "framer-motion";
 
 export function Testimonials() {
     return (
-        <div>
-            <h2 className='font-sans font-bold text-2xl mb-2 text-black dark:text-white'>Testimonials / Recommendations</h2>
+        <motion.div
+            initial={{
+                opacity: 0,
+                y: 0,
+                filter: "blur(14px)",
+            }}
+            whileInView={{
+                opacity: 1,
+                y: 0,
+                filter: "blur(0px)",
+            }}
+            viewport={{ once: true }}
+            transition={{
+                duration: 0.6,
+                ease: "easeOut",
+            }}
+        >
+            <h2 className='font-sans font-bold text-2xl mb-2 text-black dark:text-white'>Testimonials</h2>
             <div className="font-sans rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
                 <InfiniteMovingCards
                     items={testimonials}
@@ -15,7 +32,7 @@ export function Testimonials() {
                     speed="slow"
                 />
             </div>
-        </div>
+        </motion.div>
         
     );
 }

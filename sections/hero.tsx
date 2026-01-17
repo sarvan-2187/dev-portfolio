@@ -9,7 +9,23 @@ import { motion } from 'framer-motion';
 
 const HeroSection = () => {
   return (
-    <div className='h-screen font-sans flex flex-col gap-4 mt-10 md:mt-6 md:mb-8'>
+    <motion.div
+      initial={{
+        opacity: 0,
+        y: -20,
+        filter: "blur(10px)",
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        filter: "blur(0px)",
+      }}
+      viewport={{ once: true }}
+      transition={{
+        duration: 0.6,
+        ease: "easeOut",
+      }}
+      className='h-screen font-sans flex flex-col gap-4 mt-10 md:mt-6 md:mb-8'>
       <div className="flex flex-row items-center justify-between text-white p-2 rounded-lg gap-4">
         <div className='max-w-xl font-bold inline flex-col gap-2 text-black dark:text-white font-sans text-3xl md:text-5xl'>
           <EncryptedText text={'Hi I\'m Sarvan!'}></EncryptedText>
@@ -59,7 +75,7 @@ const HeroSection = () => {
         <SkillComponent />
         <Socials />
       </div>
-    </div>
+    </motion.div>
   )
 }
 
