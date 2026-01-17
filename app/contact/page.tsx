@@ -7,6 +7,9 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { StaggerTitle } from "@/components/StaggerTitle";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { Dot } from "lucide-react";
+
 
 export default function ContactPage() {
     const [loading, setLoading] = useState(false);
@@ -77,72 +80,81 @@ export default function ContactPage() {
                 
             </div>
 
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    className="mt-4  flex justify-center bg-white dark:bg-[#1a1a1a] rounded-xl">
+                    <form
+                        onSubmit={handleSubmit}
+                        className="w-full space-y-4 p-6 rounded-xl  shadow-xl"
+                    >
+                        <h1 className="text-3xl font-bold flex items-center gap-2">
+                            Get in Touch <LuMessageSquareShare className="text-[25px] font-bold text-ble-600 dark:text-blue-300" />
+                        </h1>
+
+                        <input
+                            name="name"
+                            required
+                            placeholder="Your Name"
+                            className="w-full p-2 border rounded dark:bg-[#1a1a1a] dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        />
+
+                        <input
+                            name="email"
+                            type="email"
+                            required
+                            placeholder="Your Email"
+                            className="w-full p-2 border rounded dark:bg-[#1a1a1a] dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        />
+
+                        <select
+                            name="role"
+                            required
+                            className="w-full p-2 border rounded dark:bg-[#1a1a1a] dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        >
+                            <option value="">Who are you?</option>
+                            <option value="Recruiter">Recruiter</option>
+                            <option value="Project Collaboration">
+                                Project Collaboration
+                            </option>
+                            <option value="Friend">Friend</option>
+                        </select>
+
+                        <input
+                            name="subject"
+                            required
+                            placeholder="Subject"
+                            className="w-full p-2 border rounded dark:bg-[#1a1a1a] dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        />
+
+                        <textarea
+                            name="message"
+                            rows={5}
+                            required
+                            placeholder="Your Message"
+                            className="w-full p-2 border rounded dark:bg-[#1a1a1a] dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        />
+
+                        <button
+                            disabled={loading}
+                            className="cursor-pointer w-full p-2 font-bold bg-black text-white dark:bg-white dark:text-black rounded"
+                        >
+                            {loading ? "Sending..." : "Send Message"}
+                        </button>
+                    </form>
+                </motion.div>
+                <div>
+                    <DotLottieReact
+                        src="/email.lottie"
+                        loop
+                        autoplay
+                    />
+                </div>
+            </div>
             
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                className="mt-4 md:max-w-4xl mx-auto flex justify-center bg-white dark:bg-[#1a1a1a] rounded-xl">
-                <form
-                    onSubmit={handleSubmit}
-                    className="w-full space-y-4 p-6 rounded-xl  shadow-xl"
-                >
-                    <h1 className="text-3xl font-bold flex items-center gap-2">
-                        Get in Touch <LuMessageSquareShare className="text-[25px] font-bold text-ble-600 dark:text-blue-300"/>
-                    </h1>
-
-                    <input
-                        name="name"
-                        required
-                        placeholder="Your Name"
-                        className="w-full p-2 border rounded dark:bg-[#1a1a1a] dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-
-                    <input
-                        name="email"
-                        type="email"
-                        required
-                        placeholder="Your Email"
-                        className="w-full p-2 border rounded dark:bg-[#1a1a1a] dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-
-                    <select
-                        name="role"
-                        required
-                        className="w-full p-2 border rounded dark:bg-[#1a1a1a] dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    >
-                        <option value="">Who are you?</option>
-                        <option value="Recruiter">Recruiter</option>
-                        <option value="Project Collaboration">
-                            Project Collaboration
-                        </option>
-                        <option value="Friend">Friend</option>
-                    </select>
-
-                    <input
-                        name="subject"
-                        required
-                        placeholder="Subject"
-                        className="w-full p-2 border rounded dark:bg-[#1a1a1a] dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-
-                    <textarea
-                        name="message"
-                        rows={5}
-                        required
-                        placeholder="Your Message"
-                        className="w-full p-2 border rounded dark:bg-[#1a1a1a] dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-
-                    <button
-                        disabled={loading}
-                        className="cursor-pointer w-full p-2 font-bold bg-black text-white dark:bg-white dark:text-black rounded"
-                    >
-                        {loading ? "Sending..." : "Send Message"}
-                    </button>
-                </form>
-            </motion.div>
-            <div className="pb-12 md:max-w-4xl mx-auto bg-white dark:bg-black">
+            <div className="pt-12 pb-12 md:max-w-4xl mx-auto bg-white dark:bg-black">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
