@@ -1,10 +1,11 @@
+"use client";
+
 import Image from 'next/image'
 import { SkillComponent } from './skills'
 import AboutSection from './about';
 import Socials from './socials';
 import { EncryptedText } from '@/components/ui/encrypted-text';
-
-
+import { motion } from 'framer-motion';
 
 const HeroSection = () => {
   return (
@@ -16,10 +17,26 @@ const HeroSection = () => {
             I build reliable, modern web applications with a focus on clarity, performance, and real-world impact.
           </div>
         </div>
-        <div className='flex items-center border-4 border-slate-200 dark:border-[#2f2f2f] justify-center rounded-full'>
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 0,
+            filter: "blur(10px)",
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            filter: "blur(0px)",
+          }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.3,
+            ease: "easeOut",
+          }}
+          className='flex items-center border-4 border-slate-200 dark:border-[#2f2f2f] justify-center rounded-full'>
           <Image src="https://ik.imagekit.io/sarvan/Portfolio/sarvan.png" alt="Profile Picture" width={150} height={150} className="hidden md:block rounded-full" draggable={false} />
           <Image src="https://ik.imagekit.io/sarvan/Portfolio/sarvan.png" alt="Profile Picture" width={120} height={120} className="block md:hidden rounded-full" draggable={false} />
-        </div>
+        </motion.div>
       </div>
       <AboutSection />
       <div className='grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mb-8'>
