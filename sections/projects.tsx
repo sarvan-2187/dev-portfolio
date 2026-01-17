@@ -1,11 +1,14 @@
+"use client";
 import ProjectCardDetailed from '@/components/ProjectCardDetailed';
 import { StaggerTitle } from '@/components/StaggerTitle';
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect';
+import { motion } from 'framer-motion';
 import { PiBarricadeFill } from "react-icons/pi";
 
 const ProjectsSection = () => {
   return (
-      <div className='font-sans my-4 p-2'>
+    <div
+      className='font-sans my-4 p-2'>
             <StaggerTitle
                           text="<My_Works/>"
                           className="text-3xl md:text-4xl mb-4 font-bold text-center"

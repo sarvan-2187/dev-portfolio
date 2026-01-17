@@ -50,7 +50,23 @@ export default function ContactPage() {
     }
 
     return (
-        <div className="h-screen font-sans px-4 lg:px-48">
+        <motion.div
+            initial={{
+                opacity: 0,
+                y: -20,
+                filter: "blur(10px)",
+            }}
+            whileInView={{
+                opacity: 1,
+                y: 0,
+                filter: "blur(0px)",
+            }}
+            viewport={{ once: true }}
+            transition={{
+                duration: 0.6,
+                ease: "easeOut",
+            }}
+            className="h-screen font-sans px-4 lg:px-48">
             <ContactHeaderBar />
             <div className="mt-8 md:mt-4">
                 <StaggerTitle
@@ -141,6 +157,6 @@ export default function ContactPage() {
                 </a>.
                 </motion.div>
             </div>
-        </div>
+        </motion.div>
     );
 }
