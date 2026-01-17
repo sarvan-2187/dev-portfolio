@@ -15,12 +15,12 @@ export default async function Home() {
     <div className="px-4 lg:px-58">
       <HeaderBar />
       <HeroSection />
-      <FeaturedProjectsSection />
-      <Testimonials />
-      <GithubContributions />
       <ExperienceSection />
+      <FeaturedProjectsSection />
       <EducationSection />
+      <GithubContributions />
       <AchievementsSection />
+      <Testimonials />
       <Banner />
       <FooterSection />
     </div>

@@ -14,7 +14,7 @@ const ExperienceSection = () => {
     
   return (
     <div className='p-2 mb-8'>
-          <p className='font-sans font-bold text-2xl mb-4 md:text-xl text-black dark:text-white'>Experience</p>
+          <p className='font-sans font-bold text-2xl mb-4 md:text-xl text-black dark:text-white'>Work Experience</p>
           <div className='space-y-4'>
               {/* CARD */}
               <div className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-2 rounded-lg shadow-lg'>

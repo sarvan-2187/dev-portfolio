@@ -50,13 +50,23 @@ export default function ContactPage() {
     return (
         <div className="h-screen font-sans px-4 lg:px-48">
             <ContactHeaderBar />
+            <div className="mt-4">
+                <h2 className="font-sans text-center p-2 font-bold text-3xl mb-1">
+                    {"<"}Contact_Me{"/>"}
+                </h2>
+                <p className="font-medium text-center mb-6 text-gray-600">
+                    Let&apos;s connect and build something meaningful
+                </p>
+            </div>
+
+            
             <div className="mt-12 md:mt-4 flex justify-center bg-white dark:bg-[#1a1a1a] rounded-xl">
                 <form
                     onSubmit={handleSubmit}
                     className="w-full space-y-4 p-6 rounded-xl shadow-xl"
                 >
                     <h1 className="text-3xl font-bold flex items-center gap-2">
-                        Contact Me <LuMessageSquareShare className="text-[25px] font-bold text-ble-600 dark:text-blue-300"/>
+                        Get in Touch <LuMessageSquareShare className="text-[25px] font-bold text-ble-600 dark:text-blue-300"/>
                     </h1>
 
                     <input
@@ -115,7 +125,7 @@ export default function ContactPage() {
                 Have more questions? Feel free to reach out via email at{" "}
                 <a
                     href="mailto:sarvankumarnagarampalli478@gmail.com"
-                    className="text-blue-600 underline"
+                    className="text-blue-600 dark:text-blue-400 hover:underline"
                 >
                     sarvankumarnagarampalli478@gmail.com
                 </a>.

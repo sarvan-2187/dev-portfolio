@@ -49,6 +49,7 @@ const GithubContributions = () => {
                         light: ["#e5e7eb", "#111827"],
                         dark: ["#1f2937", "#ffffff"],
                     }}
+                    blockSize={15}
                 />
             </div>
         </div>

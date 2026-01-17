@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaRegCopyright } from "react-icons/fa";
 import { FaRegFaceSmileBeam, FaCircleUser } from "react-icons/fa6";
@@ -22,7 +21,7 @@ const FooterSection = () => {
     }, []);
 
     return (
-        <div className="font-sans border-t border-black dark:border-white mt-16 mb-4 px-2">
+        <footer className="font-sans border-t border-black dark:border-white mt-16 px-2">
             <div className="py-4 rounded-2xl">
                 <div className="flex items-center gap-2 mb-6 text-xl md:text-4xl font-semibold">
                     Thank you for visiting my portfolio!<FaRegFaceSmileBeam className="inline text-xl md:text-2xl" />
@@ -41,10 +40,11 @@ const FooterSection = () => {
 
                         {visits !== null && (
                             <div className="mb-2 flex items-center gap-1">
-                                <FaCircleUser className="text-xs" /> Visitors:{" "}
+                                <FaCircleUser className="text-xs" /> You are visitor number{"`"}
                                 <span className="font-bold text-blue-600 dark:text-blue-300">
                                     {visits.toLocaleString()}
                                 </span>
+                                {"`"} to my portfolio !
                             </div>
                         )}
                     </div>
@@ -55,7 +55,7 @@ const FooterSection = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
     );
 };
 

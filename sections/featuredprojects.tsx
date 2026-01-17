@@ -7,19 +7,12 @@ const FeaturedProjectsSection = () => {
                 Featured Projects
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <ProjectCard
                     title="Stumps & Stories"
                     image="https://ik.imagekit.io/sarvan/Portfolio/og.png"
                     link="https://stumps-and-stories.vercel.app/"
                     github="https://github.com/sarvan-2187/stumps_and_stories"
-                />
-
-                <ProjectCard
-                    title="Neuronix Club"
-                    image="https://ik.imagekit.io/sarvan/Portfolio/neuronix_banner.png"
-                    link="https://neuronix-avv.vercel.app/"
-                    github="https://github.com/sarvan-2187/neuronix-club-website"
                 />
 
                 <ProjectCard
