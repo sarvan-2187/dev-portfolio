@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
-import { FaRegCopyright } from "react-icons/fa";
+import { FaRegCopyright, FaRss } from "react-icons/fa";
 import { FaRegFaceSmileBeam, } from "react-icons/fa6";
 
 
@@ -55,15 +55,12 @@ const FooterSection = () => {
                         Built with Next.js and Tailwind CSS. Hosted on Vercel.
                     </div>
                 </div>
-                <div className="py-8 flex flex-row items-center justify-center">
-                    <Button variant={"outline"} asChild className="mt-4">
-                        <a href="/not-found">Not Found</a>
-                    </Button>
-                    <Button variant={"outline"} asChild className="mt-4">
-                        <a href="/not-found">Not Found</a>
-                    </Button>
-                    <Button variant={"outline"} asChild className="mt-4">
-                        <a href="/not-found">Not Found</a>
+                <div className="py-8 flex flex-row flex-wrap items-center justify-center gap-4">
+                    <Button variant="outline" asChild>
+                        <a href="/rss.xml" target="_blank" rel="noopener noreferrer">
+                            <FaRss className="mr-2 text-orange-500" />
+                            RSS Feed
+                        </a>
                     </Button>
                 </div>
             </div>
