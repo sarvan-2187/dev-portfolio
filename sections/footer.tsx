@@ -1,5 +1,6 @@
 "use client";
 
+import { SubscribeFooterInput } from "@/components/FooterSubscribe";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { FaRegCopyright, FaRss } from "react-icons/fa";
@@ -54,6 +55,9 @@ const FooterSection = () => {
                     <div className="flex flex-col justify-end md:items-end items-start gap-1 text-xs opacity-80">
                         Built with Next.js and Tailwind CSS. Hosted on Vercel.
                     </div>
+                </div>
+                <div className="mt-6">
+                    <SubscribeFooterInput />
                 </div>
                 <div className="py-8 flex flex-row flex-wrap items-center justify-center gap-4">
                     <Button variant="outline" asChild>
