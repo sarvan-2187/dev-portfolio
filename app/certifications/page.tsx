@@ -16,7 +16,7 @@ const CertificationsPage = () => {
           text="<My_Certifications/>"
           className="text-3xl md:text-4xl mb-4 font-bold text-center"
         />
-        <TextGenerateEffect words="All of my professional certifications in one place" className="font-medium text-center mb-6 text-gray-600 tracking-tighter" />
+        <TextGenerateEffect words="All of my certifications in one place" highlight="certifications" className="font-medium text-center mb-6 text-gray-600 tracking-tighter" />
 
         <div className="space-y-4">
           <motion.div

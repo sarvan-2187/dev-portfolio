@@ -57,7 +57,7 @@ export default function ContactPage() {
                     text="<Contact_Me />"
                     className="text-3xl md:text-4xl font-bold text-center mb-4"
                 />
-                <TextGenerateEffect words="Let's connect and build!" className="text-xs text-center mb-2 text-gray-600" />
+                <TextGenerateEffect words="Let's connect and build!" highlight="connect" className="text-xs text-center mb-2 text-gray-600" />
                 
             </div>
 
