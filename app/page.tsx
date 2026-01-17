@@ -1,5 +1,3 @@
-"use client";
-
 import HeaderBar from "@/sections/header";
 import HeroSection from "@/sections/hero";
 import ExperienceSection from "@/sections/experience";
