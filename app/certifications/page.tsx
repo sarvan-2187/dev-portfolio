@@ -13,7 +13,7 @@ const CertificationsPage = () => {
       <CertificationsHeaderBar />
 
       <div className="font-sans my-4 p-2">
-        <div className="mt-8 md:mt-4">
+        <div className="mt-4">
           <StaggerTitle
             text="<My_Certifications/>"
             className="text-3xl md:text-4xl mb-4 font-bold text-center"
