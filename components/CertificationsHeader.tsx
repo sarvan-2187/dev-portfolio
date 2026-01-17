@@ -9,7 +9,7 @@ const CertificationsHeaderBar = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="mx-auto mt-2">
+        <header className="mx-auto mt-4 top-1 sticky z-50">
             <div className="relative flex items-center justify-between rounded-xl bg-white text-black p-2 px-4 dark:bg-[#1f1f1f] dark:text-white shadow-lg">
                 {/* LEFT */}
                 <div className="font-sans font-bold text-md md:text-lg text-black dark:text-white">

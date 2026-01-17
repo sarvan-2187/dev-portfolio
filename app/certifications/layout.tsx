@@ -5,7 +5,7 @@ export default function ProjectsLayout({
 }) {
     return (
         <section
-            className="min-h-screen bg-white dark:bg-black"
+            className=" bg-white dark:bg-black"
         >
             {children}
         </section>
