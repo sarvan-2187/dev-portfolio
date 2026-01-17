@@ -1,3 +1,4 @@
+"use client";
 import ProjectsHeaderBar from '@/components/ProjectHeaderbar'
 import ProjectsSection from '@/sections/projects'
 import { motion } from 'framer-motion'
