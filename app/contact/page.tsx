@@ -2,9 +2,11 @@
 
 import ContactHeaderBar from "@/components/ContactHeader";
 import { LuMessageSquareShare } from "react-icons/lu";
-import { Check, X } from "lucide-react";
+import { motion } from "motion/react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { StaggerTitle } from "@/components/StaggerTitle";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 export default function ContactPage() {
     const [loading, setLoading] = useState(false);
@@ -51,19 +53,25 @@ export default function ContactPage() {
         <div className="h-screen font-sans px-4 lg:px-48">
             <ContactHeaderBar />
             <div className="mt-4">
-                <h2 className="font-sans text-center p-2 font-bold text-3xl mb-1">
-                    {"<"}Contact_Me{"/>"}
-                </h2>
-                <p className="font-medium text-center mb-6 text-gray-600">
-                    Let&apos;s connect and build something meaningful
+                <StaggerTitle
+                    text="<Contact_Me />"
+                    className="text-4xl font-bold text-center"
+                />
+    
+                <p className="">
+                    <TextGenerateEffect words="Let's connect and build something meaningful" className="font-medium text-center mb-6 text-gray-600" />
                 </p>
             </div>
 
             
-            <div className="mt-12 md:mt-4 flex justify-center bg-white dark:bg-[#1a1a1a] rounded-xl">
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="mt-12 md:mt-4 flex justify-center bg-white dark:bg-[#1a1a1a] rounded-xl">
                 <form
                     onSubmit={handleSubmit}
-                    className="w-full space-y-4 p-6 rounded-xl shadow-xl"
+                    className="w-full space-y-4 p-6 rounded-xl md:max-w-4xl shadow-xl"
                 >
                     <h1 className="text-3xl font-bold flex items-center gap-2">
                         Get in Touch <LuMessageSquareShare className="text-[25px] font-bold text-ble-600 dark:text-blue-300"/>
@@ -119,17 +127,21 @@ export default function ContactPage() {
                         {loading ? "Sending..." : "Send Message"}
                     </button>
                 </form>
-            </div>
-            <div className="pb-12">
-            <div className="text-center bg-white p-4 shadow-xl dark:bg-[#1a1a1a] rounded-lg mt-12 md:mt-4 border">
-                Have more questions? Feel free to reach out via email at{" "}
+            </motion.div>
+            <div className="pb-12 md:max-w-4xl mx-auto">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    className="text-center bg-white p-4 shadow-xl dark:bg-[#1a1a1a] rounded-lg mt-12 md:mt-4 border">
+                Have more questions? <br/> Feel free to reach out via email at{" "}
                 <a
                     href="mailto:sarvankumarnagarampalli478@gmail.com"
                     className="text-blue-600 dark:text-blue-400 hover:underline"
                 >
                     sarvankumarnagarampalli478@gmail.com
                 </a>.
-                </div>
+                </motion.div>
             </div>
         </div>
     );
