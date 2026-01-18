@@ -36,7 +36,7 @@ const ProjectsSection = () => {
                 title="Networq"
                 description="Networq is a lightweight, browser based video conferencing app built for instant meetings. No sign-ups needed, just create a room, share the link, and start talking. Designed with a clean UI and focused on speed & clarity."
                 image="https://ik.imagekit.io/sarvan/Portfolio/networq_og.png"
-                link="#"
+                link="https://networq-video-calls.vercel.app/"
                 github="https://github.com/sarvan-2187/networq"
               />
       </div>
