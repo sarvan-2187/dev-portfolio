@@ -25,7 +25,7 @@ const CertificationsPage = () => {
         duration: 0.6,
         ease: "easeOut",
       }}
-      className="h-screen font-sans px-4 lg:px-48">
+      className="h-screen font-sans px-4 lg:px-58">
       <CertificationsHeaderBar />
 
       <div className="font-sans my-4 p-2">
