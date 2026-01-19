@@ -85,7 +85,7 @@ const CertificationsPage = () => {
               <Image src="https://ik.imagekit.io/sarvan/Portfolio/vercel.png" alt="Vercel Logo" width={50} height={50} className="object-contain rounded-full" draggable={false} />
             </div>
             <div className='flex flex-col min-w-0'>
-              <p className='font-sans font-bold text-black dark:text-white text-lg'>Next{"."}JS Fundamentals {"(4 Courses)"}</p>
+              <p className='font-sans font-bold text-black dark:text-white text-lg'>Next{"."}JS Fundamentals</p>
               <p className='font-sans text-gray-700 dark:text-white/70 text-sm'>From Vercel {"•"} Issued Jun 2025</p>
               <div className='font-sans p-2 mt-1 rounded-lg'>
                 <Button variant="outline" size="sm" asChild>
