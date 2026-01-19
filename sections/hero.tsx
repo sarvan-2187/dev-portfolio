@@ -66,8 +66,8 @@ const HeroSection = () => {
             ease: "easeOut",
           }}
           className='flex items-center border-4 border-slate-200 dark:border-[#2f2f2f] justify-center rounded-full'>
-          <Image src="https://ik.imagekit.io/sarvan/Portfolio/sticker.png" alt="Profile Picture" width={150} height={150} className="hidden md:block rounded-full" draggable={false} />
-          <Image src="https://ik.imagekit.io/sarvan/Portfolio/sticker.png" alt="Profile Picture" width={120} height={120} className="block md:hidden rounded-full" draggable={false} />
+          <Image src="https://ik.imagekit.io/sarvan/Portfolio/sarvan.png" alt="Profile Picture" width={150} height={150} className="hidden md:block rounded-full" draggable={false} />
+          <Image src="https://ik.imagekit.io/sarvan/Portfolio/sarvan.png" alt="Profile Picture" width={120} height={120} className="block md:hidden rounded-full" draggable={false} />
         </motion.div>
       </div>
       <AboutSection />
