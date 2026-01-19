@@ -69,7 +69,7 @@ export default function ContactPage() {
                 duration: 0.6,
                 ease: "easeOut",
             }}
-            className="h-screen font-sans px-4 lg:px-48">
+            className="h-screen font-sans px-4 lg:px-58">
             <ContactHeaderBar />
             <div className="mt-8 md:mt-4">
                 <StaggerTitle
