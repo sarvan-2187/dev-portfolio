@@ -65,7 +65,7 @@ const CertificationsHeaderBar = () => {
                         className="font-sans font-bold absolute right-0 top-full mt-2 w-50 rounded-xl bg-white p-3 shadow-lg dark:bg-[#1a1a1a] md:hidden">
                         <ul className="flex flex-col gap-3 text-md text-black dark:text-white">
                             <li className="flex gap-2 items-center">
-                                <MdHomeFilled className="text-sm" /><Link href={navLinks.home} onClick={() => setOpen(false)}>Home</Link>
+                                <MdHomeFilled className="text-sm" /><Link href="/" onClick={() => setOpen(false)}>Home</Link>
                             </li>
                             <li className="flex gap-2 items-center">
                                 <BsGridFill className="text-sm" /><Link href={navLinks.projects} onClick={() => setOpen(false)}>Projects</Link>
