@@ -20,7 +20,7 @@ const ProjectsSection = () => {
                 title="Stumps & Stories"
                 description="Stumps & Stories is a fully automated cricket newsletter platform that fetches verified RSS feeds, summarizes the latest 72 hours of cricket news using AI, and delivers curated emails to subscribers on a scheduled basis."
                 image="https://ik.imagekit.io/sarvan/Portfolio/og.png"
-                link="https://stumps-and-stories.vercel.app/"
+                link="https://newsletter.sarvankumar.in/"
                 github="https://github.com/sarvan-2187/stumps_and_stories"
               />
           
@@ -36,7 +36,7 @@ const ProjectsSection = () => {
                 title="Networq"
                 description="Networq is a lightweight, browser based video conferencing app built for instant meetings. No sign-ups needed, just create a room, share the link, and start talking. Designed with a clean UI and focused on speed & clarity."
                 image="https://ik.imagekit.io/sarvan/Portfolio/networq_og.png"
-                link="https://networq-video-calls.vercel.app/"
+                link="https://networq.sarvankumar.in/"
                 github="https://github.com/sarvan-2187/networq"
               />
       </div>

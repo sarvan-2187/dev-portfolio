@@ -11,14 +11,14 @@ const FeaturedProjectsSection = () => {
                 <ProjectCard
                     title="Stumps & Stories"
                     image="https://ik.imagekit.io/sarvan/Portfolio/og.png"
-                    link="https://stumps-and-stories.vercel.app/"
+                    link="https://newsletter.sarvankumar.in/"
                     github="https://github.com/sarvan-2187/stumps_and_stories"
                 />
 
                 <ProjectCard
                     title="Networq"
                     image="https://ik.imagekit.io/sarvan/Portfolio/networq_og.png"
-                    link="https://networq-video-calls.vercel.app/"
+                    link="https://networq.sarvankumar.in/"
                     github="https://github.com/sarvan-2187/networq"
                 />
             </div>
