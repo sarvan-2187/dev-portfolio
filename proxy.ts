@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export function middleware(req: NextRequest) {
+export const config = {
+  matcher: ["/:path*"],
+};
+
+export default function proxy(req: NextRequest) {
   const host = req.headers.get("host") ?? "";
   const subdomain = host.split(".")[0];
 
@@ -14,15 +18,13 @@ export function middleware(req: NextRequest) {
     certifications: "/certifications",
   };
 
-  const targetRoute = routeMap[subdomain];
+  const target = routeMap[subdomain];
 
-  if (targetRoute) {
+  if (target) {
     return NextResponse.rewrite(
-      new URL(targetRoute, req.url)
+      new URL(target + req.nextUrl.pathname, req.url)
     );
   }
 
-  return NextResponse.rewrite(
-    new URL("/404", req.url)
-  );
+  return NextResponse.rewrite(new URL("/404", req.url));
 }
