@@ -4,11 +4,11 @@ import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   try {
-    const body = await req.json();
-    const { name, email, role, subject, message } = body;
+    const { name, email, role, subject, message } = await req.json();
 
     const ntfyResponse = await fetch(
-      "https://ntfy.sh/portfolio-contact-cIVJ48UEw1jKd3yl",{
+      "https://ntfy.sh/portfolio-contact-cIVJ48UEw1jKd3yl",
+      {
         method: "POST",
         headers: {
           Title: subject || "Portfolio Contact",
@@ -17,25 +17,32 @@ export async function POST(req: Request) {
           "Content-Type": "text/plain",
         },
         body: `
-        Name: ${name}
-        Email: ${email}
-        Role: ${role}
+          Name: ${name}
+          Email: ${email}
+          Role: ${role}
 
-        Message:
-        ${message}
+          Message:
+          ${message}
         `.trim(),
       }
     );
 
     if (!ntfyResponse.ok) {
-      const errorText = await ntfyResponse.text();
-      console.error("ntfy error:", errorText);
-      return new NextResponse("ntfy failed", { status: 500 });
+      return NextResponse.json(
+        { error: "ntfy failed" },
+        { status: 500 }
+      );
     }
 
-    return new NextResponse("OK", { status: 200 });
+    return NextResponse.json(
+      { success: true },
+      { status: 200 }
+    );
   } catch (error) {
     console.error("Contact API error:", error);
-    return new NextResponse("Server error", { status: 500 });
+    return NextResponse.json(
+      { error: "Server error" },
+      { status: 500 }
+    );
   }
 }
