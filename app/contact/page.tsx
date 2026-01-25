@@ -45,7 +45,7 @@ export default function ContactPage() {
     }
 
     return (
-        <div className="min-h-screen bg-white dark:bg-black flex items-center justify-center px-4">
+        <div className="min-h-screen font-sans bg-white dark:bg-black flex items-center justify-center px-4">
             <div className="w-full max-w-5xl h-[600px] bg-white dark:bg-[#0f0f0f] rounded-2xl overflow-hidden flex shadow-2xl border border-gray-200 dark:border-gray-800">
                 <ContactHeaderBar />
                 {/* LEFT PANEL – VISUAL */}
