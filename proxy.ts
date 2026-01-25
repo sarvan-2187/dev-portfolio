@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export const config = {
-  matcher: ["/:path*"],
+  matcher: ["/((?!_next|favicon.ico).*)"],
 };
 
-export default function proxy(req: NextRequest) {
+export function middleware(req: NextRequest) {
   const host = req.headers.get("host") ?? "";
   const subdomain = host.split(".")[0];
 
@@ -20,11 +20,12 @@ export default function proxy(req: NextRequest) {
 
   const target = routeMap[subdomain];
 
-  if (target) {
-    return NextResponse.rewrite(
-      new URL(target + req.nextUrl.pathname, req.url)
-    );
+  if (!target) {
+    return NextResponse.rewrite(new URL("/404", req.url));
   }
 
-  return NextResponse.rewrite(new URL("/404", req.url));
+  const rewrittenUrl = new URL(req.url);
+  rewrittenUrl.pathname = target;
+
+  return NextResponse.rewrite(rewrittenUrl);
 }
