@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import { toast } from "sonner";
 import { LuMessageSquareShare } from "react-icons/lu";
+import contactBg from "./contact-bg.jpg";
 
 export default function ContactPage() {
     const [loading, setLoading] = useState(false);
@@ -49,7 +50,7 @@ export default function ContactPage() {
                 {/* LEFT PANEL – VISUAL */}
                 <div className="hidden md:flex w-1/2 relative">
                     <Image
-                        src="/contact-bg.jpg"
+                        src={contactBg}
                         alt="Contact visual"
                         fill
                         className="object-cover"
