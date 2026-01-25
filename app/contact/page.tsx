@@ -1,34 +1,25 @@
 "use client";
 
-import ContactHeaderBar from "@/components/ContactHeader";
-import { LuMessageSquareShare } from "react-icons/lu";
-import { motion } from "motion/react";
 import { useState } from "react";
+import Image from "next/image";
+import { motion } from "motion/react";
 import { toast } from "sonner";
-import { StaggerTitle } from "@/components/StaggerTitle";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-import { Dot } from "lucide-react";
-
+import { LuMessageSquareShare } from "react-icons/lu";
 
 export default function ContactPage() {
     const [loading, setLoading] = useState(false);
-    const [status, setStatus] = useState<React.ReactNode>(null);
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
+        setLoading(true);
 
         const form = e.currentTarget;
-        setLoading(true);
-        setStatus(null);
+        const formData = new FormData(form);
 
         try {
-            const formData = new FormData(form);
-
             const res = await fetch("/api/contact", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                cache: "no-store",
                 body: JSON.stringify({
                     name: formData.get("name"),
                     email: formData.get("email"),
@@ -39,13 +30,12 @@ export default function ContactPage() {
             });
 
             if (res.ok) {
-                
-                form.reset();
                 toast.success("Message sent successfully");
+                form.reset();
             } else {
                 toast.error("Failed to send message");
             }
-        } catch (err) {
+        } catch {
             toast.error("Failed to send message");
         } finally {
             setLoading(false);
@@ -53,52 +43,49 @@ export default function ContactPage() {
     }
 
     return (
-        <motion.div
-            initial={{
-                opacity: 0,
-                y: -20,
-                filter: "blur(14px)",
-            }}
-            whileInView={{
-                opacity: 1,
-                y: 0,
-                filter: "blur(0px)",
-            }}
-            viewport={{ once: true }}
-            transition={{
-                duration: 0.6,
-                ease: "easeOut",
-            }}
-            className="h-screen font-sans px-4 lg:px-58">
-            <ContactHeaderBar />
-            <div className="mt-8 md:mt-4">
-                <StaggerTitle
-                    text="<Contact_Me />"
-                    className="text-3xl md:text-4xl font-bold text-center mb-4"
-                />
-                <TextGenerateEffect words="Let's connect and build!" highlight="connect" className="text-xs text-center mb-2 text-gray-600" />
-                
-            </div>
+        <div className="min-h-screen bg-white dark:bg-black flex items-center justify-center px-4">
+            <div className="w-full max-w-5xl h-[600px] bg-white dark:bg-[#0f0f0f] rounded-2xl overflow-hidden flex shadow-2xl border border-gray-200 dark:border-gray-800">
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="mt-4  flex justify-center bg-white dark:bg-[#1a1a1a] rounded-xl">
-                    <form
+                {/* LEFT PANEL – VISUAL */}
+                <div className="hidden md:flex w-1/2 relative">
+                    <Image
+                        src="/contact-bg.jpg"
+                        alt="Contact visual"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                    <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-10">
+                        <p className="text-4xl font-light text-white leading-snug">
+                            Let’s Build <br />
+                            <span className="font-semibold">Something Meaningful</span>
+                        </p>
+                    </div>
+                </div>
+
+                {/* RIGHT PANEL – FORM */}
+                <div className="w-full md:w-1/2 flex items-center justify-center">
+                    <motion.form
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
                         onSubmit={handleSubmit}
-                        className="w-full space-y-4 p-6 rounded-xl  shadow-xl"
+                        className="w-full max-w-sm px-8 space-y-5"
                     >
-                        <h1 className="text-3xl font-bold flex items-center gap-2">
-                            Get in Touch <LuMessageSquareShare className="text-[25px] font-bold text-ble-600 dark:text-blue-300" />
-                        </h1>
+                        <h2 className="text-center text-2xl font-semibold text-black dark:text-white flex justify-center items-center gap-2">
+                            Contact Me <LuMessageSquareShare />
+                        </h2>
 
+                        <p className="text-center text-sm text-gray-600 dark:text-gray-400">
+                            Let’s connect and build something useful
+                        </p>
+
+                        {/* Inputs */}
                         <input
                             name="name"
                             required
                             placeholder="Your Name"
-                            className="w-full p-2 border rounded dark:bg-[#1a1a1a] dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full bg-white dark:bg-[#111] border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 text-sm text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
 
                         <input
@@ -106,19 +93,17 @@ export default function ContactPage() {
                             type="email"
                             required
                             placeholder="Your Email"
-                            className="w-full p-2 border rounded dark:bg-[#1a1a1a] dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full bg-white dark:bg-[#111] border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 text-sm text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
 
                         <select
                             name="role"
                             required
-                            className="w-full p-2 border rounded dark:bg-[#1a1a1a] dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full bg-white dark:bg-[#111] border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 text-sm text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                         >
                             <option value="">Who are you?</option>
                             <option value="Recruiter">Recruiter</option>
-                            <option value="Project Collaboration">
-                                Project Collaboration
-                            </option>
+                            <option value="Project Collaboration">Project Collaboration</option>
                             <option value="Friend">Friend</option>
                         </select>
 
@@ -126,49 +111,38 @@ export default function ContactPage() {
                             name="subject"
                             required
                             placeholder="Subject"
-                            className="w-full p-2 border rounded dark:bg-[#1a1a1a] dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full bg-white dark:bg-[#111] border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 text-sm text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
 
                         <textarea
                             name="message"
-                            rows={5}
+                            rows={4}
                             required
                             placeholder="Your Message"
-                            className="w-full p-2 border rounded dark:bg-[#1a1a1a] dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full bg-white dark:bg-[#111] border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 text-sm text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
 
+                        {/* Submit */}
                         <button
                             disabled={loading}
-                            className="cursor-pointer w-full p-2 font-bold bg-black text-white dark:bg-white dark:text-black rounded"
+                            className="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-500 transition disabled:opacity-60"
                         >
                             {loading ? "Sending..." : "Send Message"}
                         </button>
-                    </form>
-                </motion.div>
-                <div>
-                    <DotLottieReact
-                        src="/email.lottie"
-                        loop
-                        autoplay
-                    />
+
+                        {/* Footer */}
+                        <p className="text-center text-xs text-gray-600 dark:text-gray-400">
+                            Or email me at{" "}
+                            <a
+                                href="mailto:sarvankumarnagarampalli478@gmail.com"
+                                className="text-blue-600 dark:text-blue-400 hover:underline"
+                            >
+                                sarvankumarnagarampalli478@gmail.com
+                            </a>
+                        </p>
+                    </motion.form>
                 </div>
             </div>
-            
-            <div className="pt-12 pb-12 md:max-w-4xl mx-auto bg-white dark:bg-black">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="text-center bg-white p-4 shadow-xl dark:bg-[#1a1a1a] rounded-lg mt-12 md:mt-4 border">
-                Have more questions? <br/> Feel free to reach out via email at{" "}
-                <a
-                    href="mailto:sarvankumarnagarampalli478@gmail.com"
-                    className="text-blue-600 dark:text-blue-400 hover:underline"
-                >
-                    sarvankumarnagarampalli478@gmail.com
-                </a>.
-                </motion.div>
-            </div>
-        </motion.div>
+        </div>
     );
 }
