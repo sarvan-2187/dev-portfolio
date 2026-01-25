@@ -1,13 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export const config = {
-  matcher: ["/((?!_next|favicon.ico).*)"],
+  matcher: ["/((?!api|_next|favicon.ico).*)"],
 };
 
 export function proxy(req: NextRequest) {
   const host = req.headers.get("host") ?? "";
   const subdomain = host.split(".")[0];
 
+  // Allow main site
   if (subdomain === "sarvankumar" || subdomain === "www") {
     return NextResponse.next();
   }
