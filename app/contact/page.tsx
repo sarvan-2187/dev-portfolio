@@ -61,7 +61,7 @@ export default function ContactPage() {
                 duration: 0.6,
                 ease: "easeOut",
             }}
-            className="px-4 lg:px-58 bg-white dark:bg-black min-h-screen"
+            className="px-4 font-sans lg:px-58 bg-white dark:bg-black min-h-screen"
             suppressHydrationWarning
         >
             {/* Header */}
