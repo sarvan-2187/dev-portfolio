@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 import { toast } from "sonner";
 import { LuMessageSquareShare } from "react-icons/lu";
 import contactBg from "./contact-bg.jpg";
-import { ContactHeaderBar } from "@/components/ContactHeader";
+import ContactHeaderBar  from "@/components/ContactHeader";
 
 export default function ContactPage() {
     const [loading, setLoading] = useState(false);
