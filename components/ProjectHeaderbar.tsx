@@ -8,7 +8,7 @@ import { MdHomeFilled } from "react-icons/md";
 import { LiaCertificateSolid } from "react-icons/lia";
 import { AiOutlineMessage } from "react-icons/ai";
 import { motion } from "framer-motion";
-
+import { navLinks } from "@/lib/navigation";
 
 const ProjectsHeaderBar = () => {
     const [open, setOpen] = useState(false);
@@ -24,9 +24,9 @@ const ProjectsHeaderBar = () => {
                 {/* DESKTOP NAV */}
                 <nav className="hidden md:block font-sans font-bold text-md md:text-lg">
                     <ul className="flex items-center gap-4 px-2">
-                        <li><Link href="/" className="text-gray-700 dark:text-white hover:text-black dark:hover:text-blue-300 transition">Home</Link></li>
-                        <li><Link href="/certifications" className="text-gray-700 dark:text-white hover:text-black dark:hover:text-blue-300 transition">Certifications</Link></li>
-                        <li><Link href="/contact" className="text-gray-700 dark:text-white hover:text-black dark:hover:text-blue-300 transition">Contact</Link></li>
+                        <li><Link href={navLinks.home} className="text-gray-700 dark:text-white hover:text-black dark:hover:text-blue-300 transition">Home</Link></li>
+                        <li><Link href={navLinks.certifications} className="text-gray-700 dark:text-white hover:text-black dark:hover:text-blue-300 transition">Certifications</Link></li>
+                        <li><Link href={navLinks.contact} className="text-gray-700 dark:text-white hover:text-black dark:hover:text-blue-300 transition">Contact</Link></li>
                         <li className="flex items-center cursor-pointer"><ThemeToggle /></li>
                     </ul>
                 </nav>
@@ -64,13 +64,13 @@ const ProjectsHeaderBar = () => {
                         className="font-sans font-bold absolute right-0 top-full mt-2 w-50 rounded-xl bg-white p-3 shadow-lg dark:bg-[#1a1a1a] md:hidden">
                         <ul className="flex flex-col gap-3 text-md text-black dark:text-white">
                             <li className="flex gap-2 items-center">
-                                <MdHomeFilled className="text-sm" /><Link href="/" onClick={() => setOpen(false)}>Home</Link>
+                                <MdHomeFilled className="text-sm" /><Link href={navLinks.home} onClick={() => setOpen(false)}>Home</Link>
                             </li>
                             <li className="flex gap-2 items-center">
-                                <LiaCertificateSolid className="text-sm" /><Link href="/certifications" onClick={() => setOpen(false)}>Certifications</Link>
+                                <LiaCertificateSolid className="text-sm" /><Link href={navLinks.certifications} onClick={() => setOpen(false)}>Certifications</Link>
                             </li>
                             <li className="flex gap-2 items-center">
-                                <AiOutlineMessage className="text-sm" /><Link href="/contact" onClick={() => setOpen(false)}>Contact</Link>
+                                <AiOutlineMessage className="text-sm" /><Link href={navLinks.contact} onClick={() => setOpen(false)}>Contact</Link>
                             </li>
                         </ul>
                     </motion.div>
