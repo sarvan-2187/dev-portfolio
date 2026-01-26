@@ -17,6 +17,7 @@ export function proxy(req: NextRequest) {
     projects: "/projects",
     contact: "/contact",
     certifications: "/certifications",
+    roadmap: "/roadmap"
   };
 
   const target = routeMap[subdomain];
