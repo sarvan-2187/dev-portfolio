@@ -3,7 +3,7 @@
 #### Timeline: **Feb – Dec 2026**  
 #### Progress tracked via Git commits
 
-## 🟦 BASIC PHASE
+## BASIC PHASE
 
 ### FEB
 - [ ] Fundamentals of Programming
@@ -27,7 +27,7 @@
 
 ---
 
-## 🟩 ADVANCED PHASE
+## ADVANCED PHASE
 
 ### JUN
 - [ ] Sorting Algorithms
