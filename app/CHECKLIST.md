@@ -1,7 +1,7 @@
 # DSA Roadmap Checklist (C++)
 
-> Timeline: **Feb – Dec**  
-> Progress tracked via Git commits
+## Timeline: **Feb – Dec 2026**  
+# Progress tracked via Git commits
 
 ---
 
