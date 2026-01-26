@@ -81,7 +81,7 @@ const RoadmapItem: React.FC<{ item: TopicData; index: number; total: number }> =
       </div>
 
       {/* Content Card */}
-      <div className="ml-6 mb-8 bg-white p-4 rounded-lg shadow-sm border border-gray-200 flex-grow max-w-2xl">
+      <div className="ml-6 mb-8 bg-gray-100 p-4 rounded-xl shadow-[6px_6px_12px_#d1d9e6,-6px_-6px_12px_#ffffff] border border-gray-200 flex-grow max-w-2xl">
         <div className="flex justify-between items-center mb-1">
             <h3 className="text-lg font-semibold text-gray-800">{item.title}</h3>
             <span className={`text-xs font-medium px-2 py-1 rounded-full bg-${phaseColor}-50 text-${phaseColor}-600`}>
@@ -134,7 +134,7 @@ const RoadmapViewContainer: React.FC = () => {
 const KanbanCard: React.FC<{ item: TopicData }> = ({ item }) => {
     const phaseBorder = item.phase === 'BASIC' ? 'border-blue-200 hover:border-blue-400' : 'border-green-200 hover:border-green-400';
     return (
-        <div className={`bg-white p-3 rounded-md shadow-sm border ${phaseBorder} mb-3 transition-all cursor-default`}>
+        <div className={`bg-gray-100 p-3 rounded-xl shadow-[4px_4px_8px_#d1d9e6,-4px_-4px_8px_#ffffff] border ${phaseBorder} mb-3 transition-all cursor-default`}>
             <div className="flex justify-between text-xs text-gray-400 mb-1 font-mono">
                 <span>#{String(item.id).padStart(2,'0')}</span>
                 <span className={item.phase === 'BASIC' ? 'text-blue-400' : 'text-green-400'}>{item.phase[0]}</span>
@@ -152,11 +152,11 @@ const KanbanColumn: React.FC<{ month: MonthType; items: TopicData[]; colorIndex:
     const headerClass = headerColors[colorIndex % headerColors.length];
 
     return (
-        <div className={`flex-shrink-0 w-48 ${bgClass} rounded-lg overflow-hidden flex flex-col h-full max-h-[80vh]`}>
+        <div className={`flex-1 min-w-0 ${bgClass} rounded-lg overflow-hidden flex flex-col h-full`}>
             <div className={`p-3 text-center font-bold text-sm uppercase tracking-wider ${headerClass}`}>
                 {month}
             </div>
-            <div className="p-2 overflow-y-auto flex-1 scrollbar-thin scrollbar-thumb-gray-300">
+            <div className="p-2 flex-1">
                 {items.map(item => (
                     <KanbanCard key={item.id} item={item} />
                 ))}
@@ -173,7 +173,7 @@ const KanbanViewContainer: React.FC = () => {
     }, {} as Record<MonthType, TopicData[]>);
 
     return (
-        <div className="py-8 px-4 bg-gray-100 overflow-x-auto">
+        <div className="py-8 px-4 bg-gray-100 overflow-x-auto min-h-screen">
             <div className="flex gap-4 min-w-max">
                 {MONTHS.map((month, index) => (
                     <KanbanColumn
@@ -197,9 +197,9 @@ const DsaRoadmapDashboard: React.FC = () => {
   const [view, setView] = useState<ViewType>('roadmap');
 
   return (
-    <div className="font-sans min-h-screen bg-gray-50 font-sans text-gray-900">
+    <div className="min-h-screen bg-gray-50 font-sans text-gray-900 px-[58px]">
       {/* Header & Controls */}
-      <header className="bg-white shadow-sm sticky top-0 z-30 border-b border-gray-200">
+      <header className="bg-gray-100 sticky top-4 z-30 border border-gray-200 rounded-2xl mx-[58px] shadow-[6px_6px_12px_#d1d9e6,-6px_-6px_12px_#ffffff]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row justify-between items-center">
           <div className="mb-4 sm:mb-0 text-center sm:text-left">
             <h1 className="text-2xl font-bold text-gray-900 leading-tight">
@@ -209,7 +209,7 @@ const DsaRoadmapDashboard: React.FC = () => {
           </div>
 
           {/* View Toggle Buttons */}
-          <div className="bg-gray-100 p-1 rounded-lg flex items-center font-medium text-sm">
+          <div className="bg-gray-200 p-1 rounded-xl flex items-center font-medium text-sm shadow-inner">
             <button
               onClick={() => setView('roadmap')}
               className={`px-4 py-2 rounded-md transition-all ${
