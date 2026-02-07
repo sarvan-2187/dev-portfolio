@@ -25,7 +25,7 @@ const HeroSection = () => {
         duration: 0.6,
         ease: "easeOut",
       }}
-      className='h-screen font-sans flex flex-col gap-4 mt-10 md:mt-6 md:mb-8'>
+      className='font-sans flex flex-col gap-4 mt-10 md:mt-6 md:mb-8'>
       <div className="flex flex-row items-center justify-between text-white p-2 rounded-lg gap-4">
         <div className='max-w-xl font-bold inline flex-col gap-2 text-black dark:text-white font-sans text-3xl md:text-5xl'>
           <EncryptedText text={'Hi I\'m Sarvan!'}></EncryptedText>
