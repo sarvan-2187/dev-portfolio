@@ -38,7 +38,7 @@ const NotFoundPage = () => {
 
                     <div className="flex gap-4 justify-center">
                         <Button asChild>
-                            <Link href="/">Go Back Home</Link>
+                            <Link href="/">Home</Link>
                         </Button>
 
                         <Button variant="outline" asChild>
