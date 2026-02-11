@@ -17,7 +17,7 @@ const ProjectsSection = () => {
             />
               <TextGenerateEffect words="Check out my projects" highlight='projects' className="font-medium text-center mb-6 text-gray-600 tracking-tighter" />
             
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-4">
               <ProjectCardDetailed
                 title="Stumps & Stories"
                 description="Stumps & Stories is a fully automated cricket newsletter platform that fetches verified RSS feeds, summarizes the latest 72 hours of cricket news using AI, and delivers curated emails to subscribers on a scheduled basis."
