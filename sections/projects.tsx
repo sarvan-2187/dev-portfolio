@@ -26,7 +26,7 @@ const ProjectsSection = () => {
 
               <ProjectCardDetailed
                 title="Savynce"
-                description="Savynce is a Next.js App Router-based price tracking web application that integrates Supabase (Auth + PostgreSQL), Firecrawl for scraping, and Nodemailer for automated alerts. Users can track up to 3 product URLs, with scheduled cron jobs handling price updates and drop detection."
+                description="Savynce is a Next.js App Router-based price tracking web application that integrates Supabase (Auth + PostgreSQL), Firecrawl for scraping, and Nodemailer for automated alerts."
                 image="https://ik.imagekit.io/sarvan/Portfolio/savynce.png"
                 link="https://savynce-price-drops.vercel.app/"
                 github="https://github.com/sarvan-2187/savynce-price-drop-tracker"
