@@ -1,8 +1,10 @@
 "use client";
 import ProjectCardDetailed from '@/components/ProjectCardDetailed';
 import { StaggerTitle } from '@/components/StaggerTitle';
+import { Button } from '@/components/ui/button';
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect';
 import { motion } from 'framer-motion';
+import { Github } from 'lucide-react';
 import { PiBarricadeFill } from "react-icons/pi";
 
 const ProjectsSection = () => {
@@ -24,7 +26,7 @@ const ProjectsSection = () => {
                 github="https://github.com/sarvan-2187/stumps_and_stories"
               />
 
-              <ProjectCardDetailed+++++++++++++++++++++++++++++
+              <ProjectCardDetailed
                 title="Savynce"
                 description="Savynce is a Next.js App Router-based price tracking web application that integrates Supabase (Auth + PostgreSQL), Firecrawl for scraping, and Nodemailer for automated alerts."
                 image="https://ik.imagekit.io/sarvan/Portfolio/savynce.png"
@@ -63,6 +65,9 @@ const ProjectsSection = () => {
             </defs>
           </svg>
           <p className='text-center p-2 font-bold text-xl md:text-4xl mb-2'>More Projects Coming Soon!</p>
+          <div className='my-8'>
+                  <Button variant={"outline"} asChild><a href='https://github.com/sarvan-2187' target='_blank'><Github size={5}/>View More on Github</a></Button>
+                </div>
         </div>
       </div>
       </div>

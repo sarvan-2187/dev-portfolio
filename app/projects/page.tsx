@@ -27,9 +27,7 @@ const ProjectsPage = () => {
       className="px-4 lg:px-58" suppressHydrationWarning={true}>
       <ProjectsHeaderBar />
       <ProjectsSection />
-      <div className='my-8'>
-        <Button variant={"outline"} asChild><a href='https://github.com/sarvan-2187' target='_blank'><Github size={5}/>View More on Github</a></Button>
-      </div>
+      
     </motion.div>
   )
 }
