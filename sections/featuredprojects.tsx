@@ -14,7 +14,12 @@ const FeaturedProjectsSection = () => {
                     link="https://newsletter.sarvankumar.in/"
                     github="https://github.com/sarvan-2187/stumps_and_stories"
                 />
-
+                <ProjectCard
+                    title="Savynce"
+                    image="https://ik.imagekit.io/sarvan/Portfolio/savynce.png"
+                    link="https://savynce-price-drops.vercel.app/"
+                    github="https://github.com/sarvan-2187/savynce-price-drop-tracker"
+                />
                 <ProjectCard
                     title="Networq"
                     image="https://ik.imagekit.io/sarvan/Portfolio/networq_og.png"
