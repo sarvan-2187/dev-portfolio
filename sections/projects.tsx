@@ -24,7 +24,7 @@ const ProjectsSection = () => {
                 github="https://github.com/sarvan-2187/stumps_and_stories"
               />
 
-              <ProjectCardDetailed
+              <ProjectCardDetailed+++++++++++++++++++++++++++++
                 title="Savynce"
                 description="Savynce is a Next.js App Router-based price tracking web application that integrates Supabase (Auth + PostgreSQL), Firecrawl for scraping, and Nodemailer for automated alerts."
                 image="https://ik.imagekit.io/sarvan/Portfolio/savynce.png"
