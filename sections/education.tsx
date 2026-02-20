@@ -8,7 +8,7 @@ const EducationSection = () => {
             <p className='font-sans font-bold text-2xl mb-4 md:text-xl text-black dark:text-white'>Education</p>
             <div className='space-y-4'>
                 {/* CARD */}
-                <div className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-2 rounded-lg shadow-lg'>
+                <div className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-4 rounded-lg shadow-lg'>
                     <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full border-4 border-slate-100 bg-slate-200 dark:bg-[#2f2f2f] dark:border-[#1f1f1f] p-1 flex items-center justify-center'>
                         <Image src="https://ik.imagekit.io/sarvan/Portfolio/amrita.jpg" alt="Amrita Logo" width={50} height={50} className="object-contain rounded-full" draggable={false} />
                     </div>
@@ -20,7 +20,7 @@ const EducationSection = () => {
 
                 </div>
 
-                <div className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-2 rounded-lg shadow-lg'>
+                <div className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-4 rounded-lg shadow-lg'>
                     <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full border-4 border-slate-100 bg-slate-200 dark:bg-[#2f2f2f] dark:border-[#1f1f1f] p-1 flex items-center justify-center'>
                         <Image src="https://ik.imagekit.io/sarvan/Portfolio/ascent.png" alt="Ascent Logo" width={50} height={50} className="object-contain rounded-full" draggable={false} />
                     </div>
@@ -31,7 +31,7 @@ const EducationSection = () => {
                     </div>
                 </div>
 
-                <div className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-2 rounded-lg shadow-lg'>
+                <div className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-4 rounded-lg shadow-lg'>
                     <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full border-4 border-slate-100 bg-slate-200 dark:bg-[#2f2f2f] dark:border-[#1f1f1f] p-1 flex items-center justify-center'>
                         <Image src="https://ik.imagekit.io/sarvan/Portfolio/sri_chaitanya.png" alt="Sri Chaitanya Logo" width={50} height={50} className="object-contain rounded-full" draggable={false} />
                     </div>

@@ -9,7 +9,7 @@ export function proxy(req: NextRequest) {
   const subdomain = host.split(".")[0];
 
   // Allow main site
-  if (subdomain === "sarvankumar" || subdomain === "www") {
+  if (subdomain === "sarvankumar" || subdomain === "www" || subdomain === "localhost") {
     return NextResponse.next();
   }
 
