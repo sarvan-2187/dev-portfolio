@@ -10,7 +10,7 @@ import { PiCertificate } from "react-icons/pi";
 
 const CertificationsSection = () => {
   return (
-      <div className="font-sans my-4 p-2">
+      <div className="font-sans p-2">
                 <StaggerTitle
                     text="<My_Certifications/>"
                     className="text-3xl md:text-4xl mb-4 font-bold text-center"
