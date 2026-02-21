@@ -41,6 +41,7 @@ const ExperienceSection = () => {
                                   className='overflow-hidden font-sans text-gray-700 dark:text-white/70 text-sm mt-1 scrollbar-none'>
                                   <ul className='list-disc ml-5 space-y-1'>
                                       <li>Part of the <strong>Website Team</strong> for organizing the <strong>National Level Tech Fest of Amrita Vishwa Vidyapeetham, Chennai Campus.</strong></li>
+                                      <li>Managed <strong>Live Production Deployments</strong> on <strong>remote servers</strong>, handling <strong>secure file transfers, build updates, environment configuration changes,</strong> and ensuring zero-downtime releases.</li>
                                       <li>Handled live <strong>Production Database Operations</strong> using <strong>MongoDB</strong>, including <strong>user registration updates, data corrections,</strong> and ensuring real-time data consistency.</li>
                                       <li>Resolved <strong>15+ payment discrepancies and transaction failures </strong> by coordinating with the <strong>CCAvenue</strong> payment gateway and validating backend payment records.</li>
                                       <li>Built a responsive website and followed modern UI design techniques using <strong>React.js</strong> and <strong>Tailwind CSS</strong>.</li>
