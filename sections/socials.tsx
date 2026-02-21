@@ -17,7 +17,7 @@ const Socials = () => {
               <FaLinkedin />
         </a>
         </LinkPreview>
-        <LinkPreview url='https://ik.imagekit.io/sarvan/Portfolio/insta_dark.jpeg' quality={100}>
+        {/* <LinkPreview url='https://ik.imagekit.io/sarvan/Portfolio/insta_dark.jpeg' quality={100}>
           <a
             href="https://www.instagram.com/sarvan.tsx/"
             target="_blank"
@@ -46,7 +46,7 @@ const Socials = () => {
             <a href="https://wa.link/tpn4xf" target="_blank" className='text-5xl text-green-600 dark:text-green-500 hover:scale-90 transition-all duration-300 mr-2'>
               <FaWhatsappSquare />
           </a>
-        </LinkPreview>
+        </LinkPreview> */}
         <LinkPreview url='https://ik.imagekit.io/sarvan/Portfolio/x_dark.png' quality={100}>
             <a href="https://x.com/SarvanKumar2187" target="_blank" className='text-5xl text-black dark:text-gray-200 hover:scale-90 transition-all duration-300 mr-2'> 
                 <FaSquareXTwitter />
