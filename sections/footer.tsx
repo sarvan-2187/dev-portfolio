@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { FaRegCopyright, FaRobot, FaRss } from "react-icons/fa";
 import { FaRegFaceSmileBeam, } from "react-icons/fa6";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 const FooterSection = () => {
 
@@ -20,12 +20,15 @@ const FooterSection = () => {
         },
     };
 
-    const itemVariants = {
+    const itemVariants: Variants = {
         hidden: { opacity: 0, y: 10 },
         visible: {
             opacity: 1,
             y: 0,
-            transition: { duration: 0.5, ease: "easeOut" },
+            transition: {
+                duration: 0.5,
+                ease: [0, 0, 0.2, 1], // Proper cubic-bezier for easeOut
+            },
         },
     };
 
