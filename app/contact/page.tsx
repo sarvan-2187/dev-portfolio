@@ -4,45 +4,67 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
-import { LuMessageSquareShare } from "react-icons/lu";
+import { LuMessageSquareShare, LuMail, LuUser, LuBriefcase, LuHeading2 } from "react-icons/lu";
 import contactBg from "./contact-bg.jpg";
 import ContactHeaderBar from "@/components/ContactHeader";
 
 export default function ContactPage() {
     const [loading, setLoading] = useState(false);
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        role: "",
+        subject: "",
+        message: "",
+    });
+    const [errors, setErrors] = useState<Record<string, string>>({});
+
+    const validateForm = () => {
+        const newErrors: Record<string, string> = {};
+        if (!formData.name.trim()) newErrors.name = "Name is required";
+        if (!formData.email.trim()) newErrors.email = "Email is required";
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) newErrors.email = "Invalid email";
+        if (!formData.role) newErrors.role = "Please select a role";
+        if (!formData.subject.trim()) newErrors.subject = "Subject is required";
+        if (!formData.message.trim()) newErrors.message = "Message is required";
+        return newErrors;
+    };
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
+        const newErrors = validateForm();
+        if (Object.keys(newErrors).length > 0) {
+            setErrors(newErrors);
+            return;
+        }
+        
         setLoading(true);
-
-        const form = e.currentTarget;
-        const formData = new FormData(form);
+        setErrors({});
 
         try {
             const res = await fetch("/api/contact", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    name: formData.get("name"),
-                    email: formData.get("email"),
-                    role: formData.get("role"),
-                    subject: formData.get("subject"),
-                    message: formData.get("message"),
-                }),
+                body: JSON.stringify(formData),
             });
 
             if (res.ok) {
-                toast.success("Message sent successfully");
-                form.reset();
+                toast.success("Message sent successfully! I'll get back to you soon.");
+                setFormData({ name: "", email: "", role: "", subject: "", message: "" });
             } else {
-                toast.error("Failed to send message");
+                toast.error("Failed to send message. Please try again.");
             }
         } catch {
-            toast.error("Failed to send message");
+            toast.error("Network error. Please check your connection.");
         } finally {
             setLoading(false);
         }
     }
+
+    const handleInputChange = (field: string, value: string) => {
+        setFormData(prev => ({ ...prev, [field]: value }));
+        if (errors[field]) setErrors(prev => ({ ...prev, [field]: "" }));
+    };
 
     return (
         <motion.div
@@ -69,7 +91,7 @@ export default function ContactPage() {
 
             {/* Content */}
             <div className="mt-12 flex justify-center">
-                <div className="w-full max-w-5xl h-[600px] bg-white dark:bg-[#0f0f0f] rounded-2xl overflow-hidden flex shadow-2xl border border-gray-200 dark:border-gray-800">
+                <div className="w-full max-w-5xl bg-white dark:bg-[#0f0f0f] rounded-2xl overflow-hidden flex shadow-2xl border border-gray-200 dark:border-gray-800">
 
                     {/* LEFT PANEL */}
                     <div className="hidden md:flex w-1/2 relative">
@@ -80,83 +102,146 @@ export default function ContactPage() {
                             className="object-cover"
                             priority
                         />
-                        <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-10">
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-10">
                             <p className="text-4xl font-light text-white leading-snug">
-                                Let’s Build <br />
+                                Let's Build <br />
                                 <span className="font-semibold">Something Meaningful</span>
                             </p>
                         </div>
                     </div>
 
                     {/* RIGHT PANEL – FORM */}
-                    <div className="w-full md:w-1/2 flex items-center justify-center">
+                    <div className="w-full md:w-1/2 flex items-center justify-center p-6 md:p-10">
                         <form
                             onSubmit={handleSubmit}
-                            className="w-full max-w-sm px-8 space-y-5"
+                            className="w-full max-w-sm space-y-6"
                         >
-                            <h2 className="text-center text-2xl font-semibold text-black dark:text-white flex justify-center items-center gap-2">
-                                Contact Me <LuMessageSquareShare />
-                            </h2>
+                            <div className="text-center">
+                                <h2 className="text-3xl font-semibold text-black dark:text-white flex justify-center items-center gap-2 mb-2">
+                                    Contact Me <LuMessageSquareShare className="w-7 h-7" />
+                                </h2>
+                                <p className="text-sm text-gray-600 dark:text-gray-400">
+                                    Let's connect and build something useful
+                                </p>
+                            </div>
 
-                            <p className="text-center text-sm text-gray-600 dark:text-gray-400">
-                                Let’s connect and build something useful
-                            </p>
+                            {/* Name Input */}
+                            <div>
+                                <div className="relative">
+                                    <LuUser className="absolute left-3 top-3 w-4 h-4 text-gray-400" />
+                                    <input
+                                        type="text"
+                                        value={formData.name}
+                                        onChange={(e) => handleInputChange("name", e.target.value)}
+                                        placeholder="Your Name"
+                                        aria-label="Name"
+                                        className={`w-full pl-10 pr-3 py-2.5 bg-white dark:bg-[#111] border rounded-lg text-sm text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-600 transition focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                                            errors.name ? "border-red-500" : "border-gray-300 dark:border-gray-700"
+                                        }`}
+                                    />
+                                </div>
+                                {errors.name && <p className="mt-1 text-xs text-red-500">{errors.name}</p>}
+                            </div>
 
-                            <input
-                                name="name"
-                                required
-                                placeholder="Your Name"
-                                className="w-full bg-white dark:bg-[#111] border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 text-sm text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            />
+                            {/* Email Input */}
+                            <div>
+                                <div className="relative">
+                                    <LuMail className="absolute left-3 top-3 w-4 h-4 text-gray-400" />
+                                    <input
+                                        type="email"
+                                        value={formData.email}
+                                        onChange={(e) => handleInputChange("email", e.target.value)}
+                                        placeholder="Your Email"
+                                        aria-label="Email"
+                                        className={`w-full pl-10 pr-3 py-2.5 bg-white dark:bg-[#111] border rounded-lg text-sm text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-600 transition focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                                            errors.email ? "border-red-500" : "border-gray-300 dark:border-gray-700"
+                                        }`}
+                                    />
+                                </div>
+                                {errors.email && <p className="mt-1 text-xs text-red-500">{errors.email}</p>}
+                            </div>
 
-                            <input
-                                name="email"
-                                type="email"
-                                required
-                                placeholder="Your Email"
-                                className="w-full bg-white dark:bg-[#111] border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 text-sm text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            />
+                            {/* Role Select */}
+                            <div>
+                                <div className="relative">
+                                    <LuBriefcase className="absolute left-3 top-3 w-4 h-4 text-gray-400 pointer-events-none z-10" />
+                                    <select
+                                        value={formData.role}
+                                        onChange={(e) => handleInputChange("role", e.target.value)}
+                                        aria-label="Role"
+                                        className={`w-full pl-10 pr-3 py-2.5 bg-white dark:bg-[#111] border rounded-lg text-sm text-black dark:text-white appearance-none transition focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer ${
+                                            errors.role ? "border-red-500" : "border-gray-300 dark:border-gray-700"
+                                        }`}
+                                    >
+                                        <option value="">Who are you?</option>
+                                        <option value="Recruiter">Recruiter</option>
+                                        <option value="Project Collaboration">Project Collaboration</option>
+                                        <option value="Friend">Friend</option>
+                                    </select>
+                                </div>
+                                {errors.role && <p className="mt-1 text-xs text-red-500">{errors.role}</p>}
+                            </div>
 
-                            <select
-                                name="role"
-                                required
-                                className="w-full bg-white dark:bg-[#111] border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 text-sm text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            >
-                                <option value="">Who are you?</option>
-                                <option value="Recruiter">Recruiter</option>
-                                <option value="Project Collaboration">
-                                    Project Collaboration
-                                </option>
-                                <option value="Friend">Friend</option>
-                            </select>
+                            {/* Subject Input */}
+                            <div>
+                                <div className="relative">
+                                    <LuHeading2 className="absolute left-3 top-3 w-4 h-4 text-gray-400" />
+                                    <input
+                                        type="text"
+                                        value={formData.subject}
+                                        onChange={(e) => handleInputChange("subject", e.target.value)}
+                                        placeholder="Subject"
+                                        aria-label="Subject"
+                                        className={`w-full pl-10 pr-3 py-2.5 bg-white dark:bg-[#111] border rounded-lg text-sm text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-600 transition focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                                            errors.subject ? "border-red-500" : "border-gray-300 dark:border-gray-700"
+                                        }`}
+                                    />
+                                </div>
+                                {errors.subject && <p className="mt-1 text-xs text-red-500">{errors.subject}</p>}
+                            </div>
 
-                            <input
-                                name="subject"
-                                required
-                                placeholder="Subject"
-                                className="w-full bg-white dark:bg-[#111] border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 text-sm text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            />
+                            {/* Message Textarea */}
+                            <div>
+                                <div className="relative">
+                                    <textarea
+                                        value={formData.message}
+                                        onChange={(e) => handleInputChange("message", e.target.value)}
+                                        rows={4}
+                                        placeholder="Your Message"
+                                        aria-label="Message"
+                                        className={`w-full px-3 py-2.5 bg-white dark:bg-[#111] border rounded-lg text-sm text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-600 resize-none transition focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                                            errors.message ? "border-red-500" : "border-gray-300 dark:border-gray-700"
+                                        }`}
+                                    />
+                                </div>
+                                <div className="flex justify-between items-start">
+                                    {errors.message && <p className="mt-1 text-xs text-red-500">{errors.message}</p>}
+                                    <p className="mt-1 text-xs text-gray-500 ml-auto">{formData.message.length}/1000</p>
+                                </div>
+                            </div>
 
-                            <textarea
-                                name="message"
-                                rows={4}
-                                required
-                                placeholder="Your Message"
-                                className="w-full bg-white dark:bg-[#111] border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 text-sm text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            />
-
+                            {/* Submit Button */}
                             <button
+                                type="submit"
                                 disabled={loading}
-                                className="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-500 transition disabled:opacity-60"
+                                className="w-full bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold py-2.5 rounded-lg hover:from-blue-500 hover:to-blue-400 transition disabled:from-gray-400 disabled:to-gray-400 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
                             >
-                                {loading ? "Sending..." : "Send Message"}
+                                {loading ? (
+                                    <span className="flex items-center justify-center gap-2">
+                                        <span className="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+                                        Sending...
+                                    </span>
+                                ) : (
+                                    "Send Message"
+                                )}
                             </button>
 
+                            {/* Email Fallback */}
                             <p className="text-center text-xs text-gray-600 dark:text-gray-400">
                                 Or email me at{" "}
                                 <a
                                     href="mailto:sarvankumarnagarampalli478@gmail.com"
-                                    className="text-blue-600 dark:text-blue-400 hover:underline"
+                                    className="text-blue-600 dark:text-blue-400 hover:underline font-medium transition"
                                 >
                                     sarvankumarnagarampalli478@gmail.com
                                 </a>

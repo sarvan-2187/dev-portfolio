@@ -17,7 +17,16 @@ const ProjectsSection = () => {
             />
               <TextGenerateEffect words="Check out my projects" highlight='projects' className="font-medium text-center mb-6 text-gray-600 tracking-tighter" />
             
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-4">
+        
+              <ProjectCardDetailed
+                title="Savynce"
+                description="Savynce is a Next.js App Router-based price tracking web application that integrates Supabase (Auth + PostgreSQL), Firecrawl for scraping, and Nodemailer for automated alerts."
+                image="https://ik.imagekit.io/sarvan/Portfolio/savynce.png"
+                link="https://savynce-price-drops.vercel.app/"
+                github="https://github.com/sarvan-2187/savynce-price-drop-tracker"
+               />
+        
               <ProjectCardDetailed
                 title="Stumps & Stories"
                 description="Stumps & Stories is a fully automated cricket newsletter platform that fetches verified RSS feeds, summarizes the latest 72 hours of cricket news using AI, and delivers curated emails to subscribers on a scheduled basis."
@@ -26,14 +35,6 @@ const ProjectsSection = () => {
                 github="https://github.com/sarvan-2187/stumps_and_stories"
               />
 
-              <ProjectCardDetailed
-                title="Savynce"
-                description="Savynce is a Next.js App Router-based price tracking web application that integrates Supabase (Auth + PostgreSQL), Firecrawl for scraping, and Nodemailer for automated alerts."
-                image="https://ik.imagekit.io/sarvan/Portfolio/savynce.png"
-                link="https://savynce-price-drops.vercel.app/"
-                github="https://github.com/sarvan-2187/savynce-price-drop-tracker"
-              />
-          
               <ProjectCardDetailed
                 title="Neuronix Club"
           description="Neuronix is a student-driven technology club dedicated to exploring innovation at the intersection of artificial intelligence, software engineering, and emerging tech. I am a coordinator of this club."
@@ -50,27 +51,13 @@ const ProjectsSection = () => {
                 github="https://github.com/sarvan-2187/networq"
               />
       </div>
-      <div className='font-sans my-4'>
-        <div className='bg-white/80 shadow-lg flex flex-col items-center justify-center p-4 rounded-lg dark:bg-[#1a1a1a]'>
-          <PiBarricadeFill className="text-9xl mb-2" style={{
-              fill: "url(#blueGradient)",
-          }} />
-          <svg width="0" height="0">
-            <defs>
-              <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#93C5FD" />
-                <stop offset="50%" stopColor="#2563EB" />
-                <stop offset="100%" stopColor="#93C5FD" />
-              </linearGradient>
-            </defs>
-          </svg>
-          <p className='text-center p-2 font-bold text-xl md:text-4xl mb-2'>More Projects Coming Soon!</p>
-          <div className='my-8'>
-                  <Button variant={"outline"} asChild><a href='https://github.com/sarvan-2187' target='_blank'><Github size={5}/>View More on Github</a></Button>
+      <div className='font-sans py-12'>
+        <div className='max-w-3xl mx-auto text-center'>
+          <Button className="h-12 w-fit text-lg" variant={"outline"} asChild><a href='https://github.com/sarvan-2187' target='_blank'><Github size={5} />View More on Github</a></Button>
                 </div>
         </div>
       </div>
-      </div>
+      
   )
 }
 

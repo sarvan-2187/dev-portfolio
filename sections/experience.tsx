@@ -24,7 +24,7 @@ const ExperienceSection = () => {
                   </div>
 
                   <div className='flex flex-col min-w-0'>
-                      <p className='font-sans font-bold text-black dark:text-white text-lg'>Frontend Dev & Platform Ops <IoIosArrowDown
+                      <p className='font-sans font-bold text-black dark:text-white text-base md:text-lg'>Frontend Dev & Platform Ops<IoIosArrowDown
                           className={`inline text-gray-500 dark:text-white/50 mb-1 ml-1 cursor-pointer transition-transform duration-300 ${open2 ? "rotate-180" : ""
                               }`}
                           onClick={() => setOpen2(!open2)}
@@ -63,7 +63,7 @@ const ExperienceSection = () => {
                   </div>
 
                   <div className='flex flex-col min-w-0'>
-                      <p className='font-sans font-bold text-black dark:text-white text-lg'>Coordinator <IoIosArrowDown
+                      <p className='font-sans font-bold text-black dark:text-white text-base md:text-lg'>Coordinator <IoIosArrowDown
                           className={`inline text-gray-500 dark:text-white/50 mb-1 ml-1 cursor-pointer transition-transform duration-300 ${open1 ? "rotate-180" : ""
                               }`}
                           onClick={() => setOpen1(!open1)}
