@@ -5,29 +5,29 @@ export const config = {
 };
 
 export function proxy(req: NextRequest) {
-  const host = req.headers.get("host") ?? "";
-  const subdomain = host.split(".")[0];
+  // const host = req.headers.get("host") ?? "";
+  // const subdomain = host.split(".")[0];
 
-  // Allow main site
-  if (subdomain === "sarvankumar" || subdomain === "www" || subdomain === "localhost") {
-    return NextResponse.next();
-  }
+  // // Allow main site
+  // if (subdomain === "sarvankumar" || subdomain === "www" || subdomain === "localhost") {
+  //   return NextResponse.next();
+  // }
 
-  const routeMap: Record<string, string> = {
-    projects: "/projects",
-    contact: "/contact",
-    certifications: "/certifications",
-    roadmap: "/roadmap"
-  };
+  // const routeMap: Record<string, string> = {
+  //   projects: "/projects",
+  //   contact: "/contact",
+  //   certifications: "/certifications",
+  //   roadmap: "/roadmap"
+  // };
 
-  const target = routeMap[subdomain];
+  // const target = routeMap[subdomain];
 
-  if (!target) {
-    return NextResponse.rewrite(new URL("/404", req.url));
-  }
+  // if (!target) {
+  //   return NextResponse.rewrite(new URL("/404", req.url));
+  // }
 
-  const rewrittenUrl = new URL(req.url);
-  rewrittenUrl.pathname = target;
+  // const rewrittenUrl = new URL(req.url);
+  // rewrittenUrl.pathname = target;
 
-  return NextResponse.rewrite(rewrittenUrl);
+  // return NextResponse.rewrite(rewrittenUrl);
 }
