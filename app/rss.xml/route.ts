@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  const siteUrl = "https://nagarampalli-sarvan-kumar.vercel.app";
+  const siteUrl = "";
 
   const rss = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
