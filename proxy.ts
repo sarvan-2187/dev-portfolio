@@ -5,11 +5,11 @@ export const config = {
 };
 
 export function proxy(req: NextRequest) {
-  const host = req.headers.get("host") ?? "";
-  const subdomain = host.split(".")[0];
+  const host = req.headers.get("host") || "";
+  const parts = host.split(".");
+  const subdomain = parts.length > 2 ? parts[0] : "root";
 
-  // Allow main site
-  if (subdomain === "sarvankumar" || subdomain === "www" || subdomain === "localhost") {
+  if (subdomain === "root" || subdomain === "www" || host.includes("localhost")) {
     return NextResponse.next();
   }
 
@@ -17,7 +17,7 @@ export function proxy(req: NextRequest) {
     projects: "/projects",
     contact: "/contact",
     certifications: "/certifications",
-    roadmap: "/roadmap"
+    roadmap: "/roadmap",
   };
 
   const target = routeMap[subdomain];
@@ -26,8 +26,8 @@ export function proxy(req: NextRequest) {
     return NextResponse.rewrite(new URL("/404", req.url));
   }
 
-  const rewrittenUrl = new URL(req.url);
-  rewrittenUrl.pathname = target;
+  const url = req.nextUrl.clone();
+  url.pathname = target;
 
-  return NextResponse.rewrite(rewrittenUrl);
+  return NextResponse.rewrite(url);
 }
