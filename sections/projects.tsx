@@ -35,13 +35,13 @@ const ProjectsSection = () => {
                 github="https://github.com/sarvan-2187/stumps_and_stories"
               />
 
-              <ProjectCardDetailed
+              {/* <ProjectCardDetailed
                 title="Neuronix Club"
           description="Neuronix is a student-driven technology club dedicated to exploring innovation at the intersection of artificial intelligence, software engineering, and emerging tech. I am a coordinator of this club."
                 image="https://ik.imagekit.io/sarvan/Portfolio/neuronix_banner.png"
                 link="https://neuronix-avv.vercel.app/"
                 github="https://github.com/sarvan-2187/neuronix-club-website"
-              />
+              /> */}
           
               <ProjectCardDetailed
                 title="Networq"
