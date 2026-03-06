@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  const siteUrl = "";
+  const siteUrl = "sarvankumar.in";
 
   const rss = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
