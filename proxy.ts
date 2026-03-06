@@ -1,11 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export const config = {
-  matcher: ["/((?!api|_next|favicon.ico).*)"],
+  matcher: "/:path*",
 };
 
 export function proxy(req: NextRequest) {
   const host = req.headers.get("host") || "";
+  const url = req.nextUrl.clone();
 
   const domain = "sarvankumar.in";
 
@@ -15,25 +16,25 @@ export function proxy(req: NextRequest) {
     subdomain = host.replace(`.${domain}`, "").replace(domain, "");
   }
 
+  // main domain
   if (!subdomain || subdomain === "www") {
     return NextResponse.next();
   }
 
-  const routeMap: Record<string, string> = {
+  const routes: Record<string, string> = {
     projects: "/projects",
     contact: "/contact",
     certifications: "/certifications",
     roadmap: "/roadmap",
   };
 
-  const target = routeMap[subdomain];
+  const target = routes[subdomain];
 
   if (!target) {
-    return NextResponse.rewrite(new URL("/404", req.url));
+    url.pathname = "/404";
+    return NextResponse.rewrite(url);
   }
 
-  const url = req.nextUrl.clone();
   url.pathname = target;
-
   return NextResponse.rewrite(url);
 }
