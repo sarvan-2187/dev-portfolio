@@ -11,7 +11,7 @@ const FeaturedProjectsSection = () => {
                 <ProjectCard
                     title="Stumps & Stories"
                     image="https://ik.imagekit.io/sarvan/Portfolio/og.png"
-                    link="https://newsletter.sarvankumar.in/"
+                    link="https://stumps-and-stories.vercel.app/"
                     github="https://github.com/sarvan-2187/stumps_and_stories"
                 />
                 <ProjectCard
