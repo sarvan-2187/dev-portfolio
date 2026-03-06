@@ -31,7 +31,7 @@ const ProjectsSection = () => {
                 title="Stumps & Stories"
                 description="Stumps & Stories is a fully automated cricket newsletter platform that fetches verified RSS feeds, summarizes the latest 72 hours of cricket news using AI, and delivers curated emails to subscribers on a scheduled basis."
                 image="https://ik.imagekit.io/sarvan/Portfolio/og.png"
-                link="https://newsletter.sarvankumar.in/"
+                link="https://stumps-and-stories.vercel.app/"
                 github="https://github.com/sarvan-2187/stumps_and_stories"
               />
 
