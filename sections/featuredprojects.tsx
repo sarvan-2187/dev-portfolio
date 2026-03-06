@@ -23,7 +23,7 @@ const FeaturedProjectsSection = () => {
                 <ProjectCard
                     title="Networq"
                     image="https://ik.imagekit.io/sarvan/Portfolio/networq_og.png"
-                    link="https://networq.sarvankumar.in/"
+                    link="https://project-networq.vercel.app/"
                     github="https://github.com/sarvan-2187/networq"
                 />
             </div>
