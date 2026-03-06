@@ -6,10 +6,16 @@ export const config = {
 
 export function proxy(req: NextRequest) {
   const host = req.headers.get("host") || "";
-  const parts = host.split(".");
-  const subdomain = parts.length > 2 ? parts[0] : "root";
 
-  if (subdomain === "root" || subdomain === "www" || host.includes("localhost")) {
+  const domain = "sarvankumar.in";
+
+  let subdomain = "";
+
+  if (host.endsWith(domain)) {
+    subdomain = host.replace(`.${domain}`, "").replace(domain, "");
+  }
+
+  if (!subdomain || subdomain === "www") {
     return NextResponse.next();
   }
 
