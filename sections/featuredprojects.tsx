@@ -17,7 +17,7 @@ const FeaturedProjectsSection = () => {
                 <ProjectCard
                     title="Savynce"
                     image="https://ik.imagekit.io/sarvan/Portfolio/savynce.png"
-                    link="https://savynce-price-drops.vercel.app/"
+                    link="https://savynce-price-drop-tracker.vercel.app/"
                     github="https://github.com/sarvan-2187/savynce-price-drop-tracker"
                 />
                 <ProjectCard
