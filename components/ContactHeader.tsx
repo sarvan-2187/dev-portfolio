@@ -11,7 +11,7 @@ import { BsGridFill } from "react-icons/bs";
 import { motion } from "framer-motion";
 
 const ContactHeaderBar = () => {
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(false);    
 
     return (
         <header className="mx-auto mt-4 top-1 sticky z-50">
