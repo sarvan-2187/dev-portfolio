@@ -5,7 +5,7 @@ import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 
 const AboutSection = () => {
   return (
-      <div className='p-2 mb-6 ' style={{ lineHeightStep: "10px"}}>
+      <div className='p-2 ' style={{ lineHeightStep: "10px"}}>
           <p className='font-sans  font-bold text-2xl mb-2 text-black dark:text-white'>About</p>
           <HeroHighlight className="font-sans font-thin tracking-wide leading-[1.7] text-sm md:text-lg text-black dark:text-white md:max-w-2xl">
               In 2024, I have started my journey as a{" "}
