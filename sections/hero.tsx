@@ -6,6 +6,9 @@ import AboutSection from './about';
 import Socials from './socials';
 import { EncryptedText } from '@/components/ui/encrypted-text';
 import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import { Eye } from 'lucide-react';
+import { MdCall } from 'react-icons/md';
 
 const HeroSection = () => {
   return (
@@ -70,6 +73,15 @@ const HeroSection = () => {
           <Image src="https://ik.imagekit.io/sarvan/Portfolio/sarvan.png" alt="Profile Picture" width={120} height={120} className="block md:hidden rounded-full" draggable={false} />
         </motion.div>
       </div>
+      
+      <div className='text-sm mt-2 flex flex-row gap-2 px-2'>
+        <Button variant={"default"} asChild className='text-sm'>
+          <a href='https://cal.com/nagarampallli-sarvan-kumar-5jwphm' target='_blank'><MdCall></MdCall>Book A Call</a>
+        </Button>
+        <Button variant={"outline"} asChild>
+          <a href='https://drive.google.com/file/d/1qNhU2jayUuXwZb37r0lfXDFkrFBI4eq4/view?usp=sharing' target='_blank'><Eye></Eye>View Resume</a>
+        </Button>
+        </div>
       <AboutSection />
       <div className='grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mb-8'>
         <SkillComponent />
