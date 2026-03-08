@@ -83,7 +83,7 @@ const HeroSection = () => {
         </Button>
         </div>
       <AboutSection />
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mb-8'>
+      <div className='flex flex-col md:flex-row items-start gap-8 mb-2 justify-start md:justify-between'>
         <SkillComponent />
         <Socials />
       </div>
