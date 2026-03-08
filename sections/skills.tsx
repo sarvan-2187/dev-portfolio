@@ -2,21 +2,20 @@ const techStack = [
   "React.js",
   "Next.js",
   "Tailwind CSS",
-  "Python",
   "Git",
-  "MySQL",
+  "SQL",
   "Github",
   "Vercel",
   "C++",
   "JavaScript",
   "TypeScript",
   "C",
-  "Linux",
   "Data Structures",
   "Algorithms",
-  "Neon DB",
-  "Postman API",
-  "Java"
+  "PostgreSQL",
+  "Postman",
+  "Java",
+  "Python",
 ];
 
 export const SkillComponent = () => {
