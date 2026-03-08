@@ -1,6 +1,16 @@
+import { NextResponse } from "next/server";
+
 export const runtime = "nodejs";
 
-import { NextResponse } from "next/server";
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type",
+};
+
+export async function OPTIONS() {
+  return NextResponse.json({}, { headers: corsHeaders });
+}
 
 export async function POST(req: Request) {
   try {
@@ -17,32 +27,31 @@ export async function POST(req: Request) {
           "Content-Type": "text/plain",
         },
         body: `
-          Name: ${name}
-          Email: ${email}
-          Role: ${role}
+Name: ${name}
+Email: ${email}
+Role: ${role}
 
-          Message:
-          ${message}
-        `.trim(),
+Message:
+${message}
+`.trim(),
       }
     );
 
     if (!ntfyResponse.ok) {
       return NextResponse.json(
         { error: "ntfy failed" },
-        { status: 500 }
+        { status: 500, headers: corsHeaders }
       );
     }
 
     return NextResponse.json(
       { success: true },
-      { status: 200 }
+      { status: 200, headers: corsHeaders }
     );
   } catch (error) {
-    console.error("Contact API error:", error);
     return NextResponse.json(
       { error: "Server error" },
-      { status: 500 }
+      { status: 500, headers: corsHeaders }
     );
   }
 }
