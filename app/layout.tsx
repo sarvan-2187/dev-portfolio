@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "@/components/ui/sonner";
 import SmoothScroll from "@/components/SmoothScroll";
+import RouteLoader from "@/components/RouteLoader";
 
 const bebasNeue = Bebas_Neue({
   variable: "--font-bebas-neue",
@@ -42,9 +43,11 @@ export default function RootLayout({
         className={`${bebasNeue.variable} ${googleSans.variable} ${jetBrainsMono.variable} antialiased`}
       >
         <ThemeProvider attribute="class" defaultTheme="light">
-          <SmoothScroll>
-          {children}
-          </SmoothScroll>
+          <RouteLoader>
+            <SmoothScroll>
+              {children}
+            </SmoothScroll>
+          </RouteLoader>
           <Toaster />
         </ThemeProvider>
       </body>
