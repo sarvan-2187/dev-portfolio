@@ -228,14 +228,3 @@ export default function ContactPage() {
         </div>
     );
 }
-                                        </>
-                                    )}
-                                </motion.button >
-                            </form >
-                        </motion.div >
-                    </div >
-                </main >
-            </div >
-        </div >
-    );
-}
