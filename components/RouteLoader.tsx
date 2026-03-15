@@ -3,6 +3,7 @@
 import React, { useState, useEffect, Suspense } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import LoadingScreen from "./LoadingScreen";
+import { AnimatePresence } from "framer-motion";
 
 const RouteLoaderEvents = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
@@ -11,10 +12,6 @@ const RouteLoaderEvents = ({ children }: { children: React.ReactNode }) => {
   const [isFirstRender, setIsFirstRender] = useState(true);
 
   useEffect(() => {
-    // Basic detection of route change
-    // Since we can't easily hook into "start" of transition in App Router without custom wrappers,
-    // we show the loader when the pathname/searchParams change, or on initial load.
-    
     if (isFirstRender) {
       setIsLoading(true);
       const timer = setTimeout(() => {
@@ -33,7 +30,9 @@ const RouteLoaderEvents = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <>
-      {isLoading && <LoadingScreen />}
+      <AnimatePresence mode="wait">
+        {isLoading && <LoadingScreen key="route-loader" />}
+      </AnimatePresence>
       {children}
     </>
   );
