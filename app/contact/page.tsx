@@ -37,7 +37,7 @@ export default function ContactPage() {
             setErrors(newErrors);
             return;
         }
-        
+
         setLoading(true);
         setErrors({});
 
@@ -68,8 +68,8 @@ export default function ContactPage() {
 
     const inputClasses = (field: string) => `
         w-full px-4 py-3 bg-transparent border-b-2 outline-none transition-all duration-300
-        ${errors[field] 
-            ? "border-red-500 text-red-500" 
+        ${errors[field]
+            ? "border-red-500 text-red-500"
             : "border-neutral-200 dark:border-neutral-800 focus:border-blue-500 dark:focus:border-blue-400"}
         text-black dark:text-white placeholder:text-neutral-400 dark:placeholder:text-neutral-600
     `;
@@ -83,10 +83,10 @@ export default function ContactPage() {
 
             <div className="relative z-10 px-4 lg:px-58">
                 <ContactHeaderBar />
-                
+
                 <main className="max-w-7xl mx-auto pt-32 pb-24">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
-                        
+
                         {/* Left Section: Info & Hero */}
                         <div className="space-y-16">
                             <div className="space-y-4">
@@ -99,7 +99,7 @@ export default function ContactPage() {
                                     Contact
                                 </motion.div>
                                 <div className="space-y-2">
-                                    <Shuffle 
+                                    <Shuffle
                                         text="LET'S TALK"
                                         tag="h1"
                                         className="text-7xl md:text-9xl font-bold tracking-tighter leading-none text-left"
@@ -108,7 +108,7 @@ export default function ContactPage() {
                                         stagger={0.08}
                                         triggerOnHover={false}
                                     />
-                                    <Shuffle 
+                                    <Shuffle
                                         text="BUSINESS"
                                         tag="h1"
                                         className="text-7xl md:text-9xl font-bold tracking-tighter leading-none opacity-20 text-left"
@@ -226,5 +226,16 @@ export default function ContactPage() {
                 </main>
             </div>
         </div>
+    );
+}
+                                        </>
+                                    )}
+                                </motion.button >
+                            </form >
+                        </motion.div >
+                    </div >
+                </main >
+            </div >
+        </div >
     );
 }

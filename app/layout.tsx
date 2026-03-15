@@ -23,7 +23,7 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NSK2187",
+  title: "SARVAN KUMAR | Portfolio",
   description: "Portfolio of Nagarampalli Sarvan Kumar - Full-Stack Developer, showcasing projects, skills, and contact information.",
   alternates: {
     types: {

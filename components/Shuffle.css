@@ -21,7 +21,7 @@
   position: relative;
 }
 
-.shuffle-char-wrapper > span {
+.shuffle-char-wrapper>span {
   display: inline-flex;
   will-change: transform;
 }
