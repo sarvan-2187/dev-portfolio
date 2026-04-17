@@ -23,7 +23,7 @@ export default function ProjectCard({ title, image, link, github }: Project) {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="group relative w-full overflow-hidden rounded-2xl
                        border border-black/10 dark:border-white/5
-                       bg-white dark:bg-neutral-900 shadow-xl
+                       bg-white dark:bg-black dark:outline dark:outline-1 shadow-xl
                        hover:shadow-2xl transition-shadow duration-300"
         >
             <div className="relative aspect-[16/9] w-full overflow-hidden">

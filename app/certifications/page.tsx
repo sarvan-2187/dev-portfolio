@@ -1,5 +1,5 @@
 "use client";
-import CertificationsHeaderBar from '@/components/CertificationsHeader'
+
 import { StaggerTitle } from '@/components/StaggerTitle';
 import { Button } from '@/components/ui/button'
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect';
@@ -26,7 +26,7 @@ const CertificationsPage = () => {
         ease: "easeOut",
       }}
       className="h-screen font-sans px-4 lg:px-58">
-      <CertificationsHeaderBar />
+
 
       <div className="font-sans my-4 p-2">
         <div className="mt-4">
@@ -42,8 +42,8 @@ const CertificationsPage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-2 rounded-lg shadow-lg'>
-            <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full border-4 border-slate-100 bg-slate-200 dark:bg-[#2f2f2f] dark:border-[#1f1f1f] p-1 flex items-center justify-center'>
+            className='bg-[#ffffff] dark:bg-black dark:outline dark:outline-1 flex items-start gap-4 p-2 rounded-lg shadow-lg'>
+            <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full bg-slate-200 dark:bg-black p-2 flex items-center justify-center'>
               <Image src="https://ik.imagekit.io/sarvan/Portfolio/gemini.webp" alt="Gemini Logo" width={50} height={50} className="object-contain rounded-full" draggable={false} />
             </div>
             <div className='flex flex-col min-w-0'>
@@ -61,8 +61,8 @@ const CertificationsPage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-2 rounded-lg shadow-lg'>
-            <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full border-4 border-slate-100 bg-slate-200 dark:bg-[#2f2f2f] dark:border-[#1f1f1f] p-1 flex items-center justify-center'>
+            className='bg-[#ffffff] dark:bg-black dark:outline dark:outline-1 flex items-start gap-4 p-2 rounded-lg shadow-lg'>
+            <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full bg-slate-200 dark:bg-black p-2 flex items-center justify-center'>
               <Image src="https://ik.imagekit.io/sarvan/Portfolio/databricks.jpg" alt="Databricks Logo" width={50} height={50} className="object-contain rounded-full" draggable={false} />
             </div>
             <div className='flex flex-col min-w-0'>
@@ -80,8 +80,8 @@ const CertificationsPage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-2 rounded-lg shadow-lg'>
-            <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full border-4 border-slate-100 bg-slate-200 dark:bg-[#2f2f2f] dark:border-[#1f1f1f] p-1 flex items-center justify-center'>
+            className='bg-[#ffffff] dark:bg-black dark:outline dark:outline-1 flex items-start gap-4 p-2 rounded-lg shadow-lg'>
+            <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full bg-slate-200 dark:bg-black p-2 flex items-center justify-center'>
               <Image src="https://ik.imagekit.io/sarvan/Portfolio/vercel.png" alt="Vercel Logo" width={50} height={50} className="object-contain rounded-full" draggable={false} />
             </div>
             <div className='flex flex-col min-w-0'>
@@ -99,8 +99,8 @@ const CertificationsPage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-2 rounded-lg shadow-lg'>
-            <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full border-4 border-slate-100 bg-slate-200 dark:bg-[#2f2f2f] dark:border-[#1f1f1f] p-1 flex items-center justify-center'>
+            className='bg-[#ffffff] dark:bg-black dark:outline dark:outline-1 flex items-start gap-4 p-2 rounded-lg shadow-lg'>
+            <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full bg-slate-200 dark:bg-black p-2 flex items-center justify-center'>
               <Image src="https://ik.imagekit.io/sarvan/Portfolio/postman.jpg" alt="Postman Logo" width={50} height={50} className="object-contain rounded-full" draggable={false} />
             </div>
             <div className='flex flex-col min-w-0'>
@@ -118,8 +118,8 @@ const CertificationsPage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-2 rounded-lg shadow-lg'>
-            <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full border-4 border-slate-100 bg-slate-200 dark:bg-[#2f2f2f] dark:border-[#1f1f1f] p-1 flex items-center justify-center'>
+            className='bg-[#ffffff] dark:bg-black dark:outline dark:outline-1 flex items-start gap-4 p-2 rounded-lg shadow-lg'>
+            <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full bg-slate-200 dark:bg-black p-2 flex items-center justify-center'>
               <Image src="https://ik.imagekit.io/sarvan/Portfolio/hubspot_academy_logo.jpg" alt="HubSpot Academy Logo" width={50} height={50} className="object-contain rounded-full" draggable={false} />
             </div>
             <div className='flex flex-col min-w-0'>
@@ -132,7 +132,7 @@ const CertificationsPage = () => {
               </div>
             </div>
           </motion.div>
-          <div className='bg-[#ffffff] dark:bg-[#131313] flex flex-col items-center justify-center gap-4 p-2 rounded-lg shadow-lg'>
+          <div className='bg-[#ffffff] dark:bg-black dark:outline dark:outline-1 flex flex-col items-center justify-center gap-4 p-2 rounded-lg shadow-lg'>
             <PiCertificate size={100} className=" text-gray-600 dark:text-gray-400" />
             <div className='flex flex-col text-center min-w-0 tracking-wide'>
               <p className='font-sans font-bold text-black dark:text-white text-lg md:text-2xl'>More Certifications Coming Soon...</p>

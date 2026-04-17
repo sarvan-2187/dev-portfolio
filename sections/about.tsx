@@ -29,13 +29,13 @@ const AboutSection = () => {
           </HeroHighlight>
 
           <div className='mt-4 flex flex-wrap gap-2'>
-            <div className='bg-white dark:bg-[#1f1f1f] text-xs p-2 text-center rounded-2xl w-fit shadow-lg font-sans font-medium text-black dark:text-white'>
-                18Yr Old
+            <div className='bg-white dark:bg-black dark:outline dark:outline-1 dark:text-white text-xs p-2 text-center rounded-2xl w-fit shadow-lg font-sans font-medium text-black'>
+                19Yr Old
               </div>
-              <div className='bg-white dark:bg-[#1f1f1f] text-xs p-2 text-center rounded-2xl w-fit shadow-lg font-sans font-medium text-black dark:text-white'>
+              <div className='bg-white dark:bg-black dark:outline dark:outline-1 dark:text-white text-xs p-2 text-center rounded-2xl w-fit shadow-lg font-sans font-medium text-black'>
                 <FaLocationDot className="text-xs inline mb-1" /> Chennai, India
               </div>
-              <div className='bg-white dark:bg-[#1f1f1f] text-xs p-2 text-center rounded-2xl w-fit shadow-lg font-sans font-medium text-black dark:text-white'>
+              <div className='bg-white dark:bg-black dark:outline dark:outline-1 dark:text-white text-xs p-2 text-center rounded-2xl w-fit shadow-lg font-sans font-medium text-black'>
                   <IoMdTime className="text-xs inline mb-1" /> <ISTClock/>
               </div>
           </div>

@@ -11,7 +11,7 @@ const AchievementsSection = () => {
 
         {/* CARD 1 */}
 
-        <div className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-4 rounded-lg shadow-lg'>
+        <div className='bg-[#ffffff] dark:bg-black dark:outline dark:outline-1 flex items-start gap-4 p-4 rounded-lg shadow-lg'>
           <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full border-4 border-slate-100 bg-slate-200 dark:bg-[#2f2f2f] dark:border-[#1f1f1f] p-1 flex items-center justify-center'>
             <VscVerifiedFilled className="text-blue-500 text-3xl"/>
           </div>
@@ -43,7 +43,7 @@ const AchievementsSection = () => {
         </div>
 
         {/* CARD 2 */}
-        <div className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-4 rounded-lg shadow-lg'>
+        <div className='bg-[#ffffff] dark:bg-black dark:outline dark:outline-1 flex items-start gap-4 p-4 rounded-lg shadow-lg'>
           <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full border-4 border-slate-100 bg-slate-200 dark:bg-[#2f2f2f] dark:border-[#1f1f1f] p-1 flex items-center justify-center'>
             <VscVerifiedFilled className="text-blue-500 text-3xl"/>
           </div>
@@ -80,7 +80,7 @@ const AchievementsSection = () => {
         
 
         {/* CARD 3 */}
-        <div className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-4 rounded-lg shadow-lg'>
+        <div className='bg-[#ffffff] dark:bg-black dark:outline dark:outline-1 flex items-start gap-4 p-4 rounded-lg shadow-lg'>
           <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full border-4 border-slate-100 bg-slate-200 dark:bg-[#2f2f2f] dark:border-[#1f1f1f] p-1 flex items-center justify-center'>
             <VscVerifiedFilled className="text-blue-500 text-3xl"/>
           </div>
@@ -114,7 +114,7 @@ const AchievementsSection = () => {
         </div>
 
         {/* CARD 4 */}
-        <div className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-4 rounded-lg shadow-lg'>
+        <div className='bg-[#ffffff] dark:bg-black dark:outline dark:outline-1 flex items-start gap-4 p-4 rounded-lg shadow-lg'>
           <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full border-4 border-slate-100 bg-slate-200 dark:bg-[#2f2f2f] dark:border-[#1f1f1f] p-1 flex items-center justify-center'>
             <VscVerifiedFilled className="text-blue-500 text-3xl"/>
           </div>

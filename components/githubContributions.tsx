@@ -68,7 +68,7 @@ const GithubContributions = () => {
                             "#000000", 
                         ],
                         dark: [
-                            "#111827", 
+                            "#070707ff", 
                             "#ffffff",
                         ],
                     }}

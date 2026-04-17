@@ -5,7 +5,7 @@ import Marquee from "react-fast-marquee";
 
 const NotFoundPage = () => {
     return (
-        <div className="h-screen font-sans flex flex-col bg-white dark:bg-black" suppressHydrationWarning={true}>
+        <div className="h-screen font-sans flex flex-col bg-white dark:bg-background" suppressHydrationWarning={true}>
 
             <div className="w-full bg-black text-white dark:bg-white dark:text-black text-3xl font-bold">
                 <Marquee speed={40} pauseOnHover className="py-3">

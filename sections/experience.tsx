@@ -18,9 +18,9 @@ const ExperienceSection = () => {
           <div className='space-y-4'>
               {/* CARD */}
 
-              <div className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-4 rounded-lg shadow-lg'>
-                  <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full border-4 border-slate-100 bg-slate-200 dark:bg-[#2f2f2f] dark:border-[#1f1f1f] p-1 flex items-center justify-center'>
-                      <Image src="https://ik.imagekit.io/sarvan/Portfolio/Octo_Logo.png" alt="Tantrotsav Logo" width={50} height={50} className="object-contain rounded-full" draggable={false} />
+              <div className='bg-[#ffffff] dark:bg-black dark:outline dark:outline-1 flex items-start gap-4 p-4 rounded-lg shadow-lg'>
+                  <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full border-slate-100 bg-slate-200 dark:bg-black dark:outline dark:outline-1 p-2 flex items-center justify-center'>
+                      <Image src="https://ik.imagekit.io/sarvan/Portfolio/avv-logo.png" alt="Amrita Tantrotsav Logo" width={50} height={50} className="object-contain rounded-full" draggable={false} />
                   </div>
 
                   <div className='flex flex-col min-w-0'>
@@ -57,8 +57,8 @@ const ExperienceSection = () => {
                   </div>
 
               </div>
-              <div className='bg-[#ffffff] dark:bg-[#131313] flex items-start gap-4 p-4 rounded-lg shadow-lg'>
-                  <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full border-4 border-slate-100 bg-slate-200 dark:bg-[#2f2f2f] dark:border-[#1f1f1f] p-1 flex items-center justify-center'>
+              <div className='bg-[#ffffff] dark:bg-black dark:outline dark:outline-1 flex items-start gap-4 p-4 rounded-lg shadow-lg'>
+                  <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full border-slate-100 bg-slate-200 dark:bg-black dark:outline dark:outline-1  p-1 flex items-center justify-center'>
                       <Image src="https://ik.imagekit.io/sarvan/Portfolio/nueronix.png" alt="Neuronix Logo" width={50} height={50} className="object-contain rounded-full" draggable={false} />
                   </div>
 

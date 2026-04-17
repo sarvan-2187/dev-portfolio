@@ -25,7 +25,7 @@ export function Testimonials() {
             }}
         >
             <h2 className='font-sans font-bold text-2xl mb-2 text-black dark:text-white'>Testimonials</h2>
-            <div className="font-sans rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+            <div className="font-sans rounded-md flex flex-col antialiased dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
                 <InfiniteMovingCards
                     items={testimonials}
                     direction="right"

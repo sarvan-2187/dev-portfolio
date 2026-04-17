@@ -1,5 +1,5 @@
 "use client";
-import ProjectsHeaderBar from '@/components/ProjectHeaderbar'
+
 import { Button } from '@/components/ui/button';
 import ProjectsSection from '@/sections/projects'
 import { motion } from 'framer-motion'
@@ -25,7 +25,7 @@ const ProjectsPage = () => {
               ease: "easeOut",
             }}
       className="px-4 lg:px-58" suppressHydrationWarning={true}>
-      <ProjectsHeaderBar />
+
       <ProjectsSection />
       
     </motion.div>

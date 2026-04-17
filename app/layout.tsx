@@ -32,6 +32,8 @@ export const metadata: Metadata = {
   },
 };
 
+import BottomBar from "@/components/BottomBar";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -48,6 +50,7 @@ export default function RootLayout({
               {children}
             </SmoothScroll>
           </RouteLoader>
+          <BottomBar />
           <Toaster />
         </ThemeProvider>
       </body>

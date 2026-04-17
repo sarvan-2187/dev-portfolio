@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
 import { LuSend, LuLoader } from "react-icons/lu";
-import ContactHeaderBar from "@/components/ContactHeader";
+
 import Shuffle from "@/components/Shuffle";
 import ContactInfo from "@/components/ContactInfo";
 
@@ -82,7 +82,7 @@ export default function ContactPage() {
             <div className="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-500/10 blur-[120px] rounded-full pointer-events-none" />
 
             <div className="relative z-10 px-4 lg:px-58">
-                <ContactHeaderBar />
+
 
                 <main className="max-w-7xl mx-auto pt-32 pb-24">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
