@@ -37,6 +37,20 @@ const ACHIEVEMENTS = {
     ],
     Academic: [
         {
+            title: "Ranked 2nd in Semester III",
+            subtitle: "Academics • Jan 2023",
+            description: "Received for securing 9.32 SGPA in Semester III at Amrita Vishwa Vidyapeetham.",
+            linkText: "View Certificate",
+            linkUrl: "https://drive.google.com/file/d/1DWSniTIuccnVi3k_IB6f7Qy-Rs0z2hy3/view",
+        },
+        {
+            title: "Ranked 1st in Semester II",
+            subtitle: "Academics • Jan 2023",
+            description: "Received for securing 9.42 SGPA in Semester II at Amrita Vishwa Vidyapeetham.",
+            linkText: "View Certificate",
+            linkUrl: "https://drive.google.com/file/d/13UkPkGFY3U85dU0dbXRZ_Z3XL9eWBkqq/view",
+        },
+        {
             title: "Academic Excellence Award",
             subtitle: "Academics • Jan 2023",
             description: "Received for outstanding performance in studies at Ascent Classes.",
