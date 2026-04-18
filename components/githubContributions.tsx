@@ -63,14 +63,8 @@ const GithubContributions = () => {
                     }}
                     colorScheme={isDark ? "dark" : "light"}
                     theme={{
-                        light: [
-                            "#f3f4f6", 
-                            "#000000", 
-                        ],
-                        dark: [
-                            "#070707ff", 
-                            "#ffffff",
-                        ],
+                        light: ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"],
+                        dark: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
                     }}
                     blockSize={15}
                 />
