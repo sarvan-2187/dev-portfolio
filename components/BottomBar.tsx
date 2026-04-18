@@ -58,11 +58,7 @@ export default function BottomBar() {
                     );
                 })}
                 
-                <div className="w-px h-8 bg-neutral-200 dark:bg-neutral-800 mx-1" />
-                
-                <div className="scale-75">
-                    <ThemeToggle />
-                </div>
+                <ThemeToggle />
             </motion.div>
         </div>
     );

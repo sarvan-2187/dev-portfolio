@@ -1,153 +1,51 @@
-import { VscVerifiedFilled } from "react-icons/vsc";
+import AchievementCard from "@/components/AchievementCard";
+
+const ACHIEVEMENTS = [
+    {
+        title: "Runners Up in Code of Caribbean",
+        subtitle: "Event • Mar 2026",
+        description: "Cleared all the three rounds and secured the 2nd position.",
+        linkText: "View Github",
+        linkUrl: "https://github.com/sarvan-2187/code-of-caribbean",
+    },
+    {
+        title: "Top 20 in Suprathon",
+        subtitle: "Hackathon • Jul 2025",
+        description: "Presented my idea Aarogya AI, a one-stop solution for AI based Health Care in India.",
+        linkText: "View Certificate",
+        linkUrl: "https://drive.google.com/file/d/1Iv8_6W9TdRom5l0WWjGZKItG5t5HLifE/view",
+    },
+    {
+        title: "Flash 2K25",
+        highlight: "(1st Hackathon Win!)",
+        subtitle: "Hackathon • Jan 2025",
+        description: "Developed Pill-Pal, a web application designed to provide medication reminders for elderly users.",
+        linkText: "View Certificate",
+        linkUrl: "https://drive.google.com/file/d/1I_xiXDhK_kRg-cbzxEEH8H8YE0BlMTiq/view",
+    },
+    {
+        title: "Academic Excellence Award",
+        subtitle: "Academics • Jan 2023",
+        description: "Received for outstanding performance in studies at Ascent Classes.",
+        linkText: "View Certificate",
+        linkUrl: "https://drive.google.com/file/d/1cgFKjL-ebAwq00BPivaLBWJFidU4uzsi/view",
+    },
+];
 
 const AchievementsSection = () => {
-  return (
-    <div className='p-2 font-sans mb-8'> 
-      <p className='font-bold text-2xl mb-4 md:text-xl text-black dark:text-white'>
-        Achievements
-      </p>
-
-      <div className='space-y-4'>
-
-        {/* CARD 1 */}
-
-        <div className='bg-[#ffffff] dark:bg-black dark:outline dark:outline-1 flex items-start gap-4 p-4 rounded-lg shadow-lg'>
-          <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full border-4 border-slate-100 bg-slate-200 dark:bg-[#2f2f2f] dark:border-[#1f1f1f] p-1 flex items-center justify-center'>
-            <VscVerifiedFilled className="text-blue-500 text-3xl"/>
-          </div>
-
-          <div className='flex flex-col min-w-0'>
-            <p className='font-bold text-black dark:text-white text-lg'>
-              Runners Up in Code of Caribbean
-            </p>
-            <p className='text-gray-700 dark:text-white/70 text-sm'>
-              Event • Mar 2026
+    return (
+        <div className='p-2 font-sans mb-8'>
+            <p className='font-bold text-2xl mb-4 md:text-xl text-black dark:text-white'>
+                Achievements
             </p>
 
-            <div className='p-2 mt-1 bg-gray-100 dark:bg-[#1f1f1f] rounded-lg'>
-              <ul className='text-gray-700 dark:text-white/70 text-xs'>
-                <li>Cleared all the three rounds and secured the 2nd position.</li>
-                <li className="mt-2">
-                  <a
-                    href="https://github.com/sarvan-2187/code-of-caribbean"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-black dark:text-white font-semibold hover:underline"
-                  >
-                    View Github
-                  </a>
-                </li>
-              </ul>
+            <div className='space-y-4'>
+                {ACHIEVEMENTS.map((achievement) => (
+                    <AchievementCard key={achievement.title} {...achievement} />
+                ))}
             </div>
-          </div>
         </div>
-
-        {/* CARD 2 */}
-        <div className='bg-[#ffffff] dark:bg-black dark:outline dark:outline-1 flex items-start gap-4 p-4 rounded-lg shadow-lg'>
-          <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full border-4 border-slate-100 bg-slate-200 dark:bg-[#2f2f2f] dark:border-[#1f1f1f] p-1 flex items-center justify-center'>
-            <VscVerifiedFilled className="text-blue-500 text-3xl"/>
-          </div>
-
-          <div className='flex flex-col min-w-0'>
-            <p className='font-bold text-black dark:text-white text-lg'>
-              Top 20 in Suprathon
-            </p>
-            <p className='text-gray-700 dark:text-white/70 text-sm'>
-              Hackathon • Jul 2025
-            </p>
-
-            <div className='p-2 mt-1 bg-gray-100 dark:bg-[#1f1f1f] rounded-lg'>
-              <ul className='text-gray-700 dark:text-white/70 text-xs'>
-                <li>
-                  Presented my idea Aarogya AI, a one-stop solution for AI based Health Care in India.
-                </li>
-                <li className="mt-2">
-                  <a
-                    href="https://drive.google.com/file/d/1Iv8_6W9TdRom5l0WWjGZKItG5t5HLifE/view"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-black dark:text-white font-semibold hover:underline"
-                  >
-                    View Certificate
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        
-        
-
-        {/* CARD 3 */}
-        <div className='bg-[#ffffff] dark:bg-black dark:outline dark:outline-1 flex items-start gap-4 p-4 rounded-lg shadow-lg'>
-          <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full border-4 border-slate-100 bg-slate-200 dark:bg-[#2f2f2f] dark:border-[#1f1f1f] p-1 flex items-center justify-center'>
-            <VscVerifiedFilled className="text-blue-500 text-3xl"/>
-          </div>
-
-          <div className='flex flex-col min-w-0'>
-            <p className='font-bold text-black dark:text-white text-lg'>
-              Flash 2K25 <span className="text-blue-600 dark:text-blue-300">(1st Hackathon Win!)</span>
-            </p>
-            <p className='text-gray-700 dark:text-white/70 text-sm'>
-              Hackathon • Jan 2025
-            </p>
-
-            <div className='p-2 mt-1 bg-gray-100 dark:bg-[#1f1f1f] rounded-lg'>
-              <ul className='text-gray-700 dark:text-white/70 text-xs'>
-                <li>
-                  Developed Pill-Pal, a web application designed to provide medication reminders for elderly users.
-                </li>
-                <li className="mt-2">
-                  <a
-                    href="https://drive.google.com/file/d/1I_xiXDhK_kRg-cbzxEEH8H8YE0BlMTiq/view"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-black dark:text-white font-semibold hover:underline"
-                  >
-                    View Certificate
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* CARD 4 */}
-        <div className='bg-[#ffffff] dark:bg-black dark:outline dark:outline-1 flex items-start gap-4 p-4 rounded-lg shadow-lg'>
-          <div className='w-[48px] h-[48px] flex-shrink-0 rounded-full border-4 border-slate-100 bg-slate-200 dark:bg-[#2f2f2f] dark:border-[#1f1f1f] p-1 flex items-center justify-center'>
-            <VscVerifiedFilled className="text-blue-500 text-3xl"/>
-          </div>
-
-          <div className='flex flex-col min-w-0'>
-            <p className='font-bold text-black dark:text-white text-lg'>
-              Academic Excellence Award
-            </p>
-            <p className='text-gray-700 dark:text-white/70 text-sm'>
-              Academics • Jan 2023
-            </p>
-
-            <div className='p-2 mt-1 bg-gray-100 dark:bg-[#1f1f1f] rounded-lg'>
-              <ul className='text-gray-700 dark:text-white/70 text-xs'>
-                <li>Received for outstanding performance in studies at Ascent Classes.</li>
-                <li className="mt-2">
-                  <a
-                    href="https://drive.google.com/file/d/1cgFKjL-ebAwq00BPivaLBWJFidU4uzsi/view"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-black dark:text-white font-semibold hover:underline"
-                  >
-                    View Certificate
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  );
+    );
 };
 
 export default AchievementsSection;

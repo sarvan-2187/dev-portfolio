@@ -21,8 +21,8 @@ const LoadingScreen: React.FC = () => {
           animationMode="random"
           loop={true}
           loopDelay={0.2}
-          triggerOnHover={false}
-          className="text-4xl md:text-6xl font-bold tracking-tighter"
+          className="text-4xl md:text-6xl tracking-tighter"
+          style={{ fontFamily: "'Sekuya', sans-serif" }}
         />
         <div className="w-48 h-[2px] bg-neutral-200 dark:bg-neutral-800 overflow-hidden relative">
           <div className="absolute inset-0 bg-black dark:bg-white animate-loading-progress origin-left" />
