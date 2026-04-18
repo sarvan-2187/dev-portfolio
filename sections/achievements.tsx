@@ -6,6 +6,13 @@ import AchievementCard from "@/components/AchievementCard";
 const ACHIEVEMENTS = {
     Technical: [
         {
+            title: "Top 10 in DeltaBuild Hackathon",
+            subtitle: "Hackathon • Apr 2026",
+            description: "Developed FinShield, a web application designed to analyze loan agreements and help users understand hidden charges and risks.",
+            linkText: "View Github",
+            linkUrl: "https://github.com/sarvan-2187/delta-build",
+        },
+        {
             title: "Runners Up in Code of Caribbean",
             subtitle: "Event • Mar 2026",
             description: "Cleared all the three rounds and secured the 2nd position.",
