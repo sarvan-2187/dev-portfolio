@@ -4,13 +4,13 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { Home, Folder, Award, Map, Mail, Phone, FileText } from "lucide-react";
+import { Home, Folder, Award, Map, Mail, Phone, FileText, Terminal as TerminalIcon } from "lucide-react";
 import { ThemeToggle } from "@/app/theme-toggle";
 
 const navItems = [
     { name: "Home", href: "/", icon: Home },
     { name: "Projects", href: "/projects", icon: Folder },
-    { name: "Certifications", href: "/certifications", icon: Award },
+    { name: "CLI", href: "/cli", icon: TerminalIcon },
     { name: "Resume", href: "https://drive.google.com/file/d/1qNhU2jayUuXwZb37r0lfXDFkrFBI4eq4/view?usp=sharing", icon: FileText, external: true },
     { name: "Contact", href: "/contact", icon: Mail },
 ];

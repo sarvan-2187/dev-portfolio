@@ -41,7 +41,7 @@ const EXPERIENCES = [
 const ExperienceSection = () => {
     return (
         <div className='p-2 mb-8'>
-            <p className='font-sans font-bold text-2xl mb-4 md:text-xl text-black dark:text-white'>Work Experience</p>
+            <p className='font-sans font-bold text-2xl mb-4 md:text-3xl text-black dark:text-white'>Work Experience</p>
             <div className='space-y-4'>
                 {EXPERIENCES.map((exp) => (
                     <ExperienceCard key={exp.role} {...exp} />

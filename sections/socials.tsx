@@ -10,7 +10,7 @@ import { FaMediumM } from "react-icons/fa";
 const Socials = () => {
   return (
       <div className='p-2'>
-          <p className='font-sans font-bold text-2xl mb-2 md:text-xl text-black dark:text-white'>Code & Social</p>
+          <p className='font-sans font-bold text-2xl mb-2 md:text-3xl text-black dark:text-white'>Code & Social</p>
       <div className='flex flex-wrap gap-2'>
         <LinkPreview url='https://ik.imagekit.io/sarvan/Portfolio/linkedin_dark.png' quality={100}>
             <a href="https://www.linkedin.com/in/nagarampalli-sarvan-kumar/" target="_blank" className='text-5xl text-blue-500 dark:text-blue-600 hover:scale-90 transition-all duration-300 mr-2'>

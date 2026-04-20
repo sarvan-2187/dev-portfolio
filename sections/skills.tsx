@@ -20,7 +20,7 @@ const techStack = [
 export const SkillComponent = () => {
   return (
         <div className = 'p-2' >
-        <p className='font-sans font-bold text-2xl mb-2 md:text-xl text-black dark:text-white'>Skills</p>
+        <p className='font-sans font-bold text-2xl mb-2 md:text-3xl text-black dark:text-white'>Skills</p>
         <div className="flex flex-wrap gap-2 max-w-2xl">
           {techStack.map((tech) => (
             <span

@@ -24,7 +24,7 @@ const EDUCATION = [
 const EducationSection = () => {
     return (
         <div className='p-2 mb-8'>
-            <p className='font-sans font-bold text-2xl mb-4 md:text-xl text-black dark:text-white'>Education</p>
+            <p className='font-sans font-bold text-2xl mb-4 md:text-3xl text-black dark:text-white'>Education</p>
             <div className='space-y-4'>
                 {EDUCATION.map((edu) => (
                     <EducationCard key={edu.institution} {...edu} />

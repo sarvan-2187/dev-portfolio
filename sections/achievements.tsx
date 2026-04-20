@@ -68,7 +68,7 @@ const AchievementsSection = () => {
     return (
         <div className='p-2 font-sans mb-8'>
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6">
-                <p className='font-bold text-2xl md:text-xl text-black dark:text-white mb-4 sm:mb-0'>
+                <p className='font-bold text-2xl md:text-3xl text-black dark:text-white mb-4 sm:mb-0'>
                     Achievements
                 </p>
                 <div className="flex p-1 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/10 w-fit">

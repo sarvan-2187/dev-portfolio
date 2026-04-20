@@ -7,6 +7,7 @@ import { Banner } from "@/components/Banner";
 import FeaturedProjectsSection from "@/sections/featuredprojects";
 import FooterSection from "@/sections/footer";
 import GithubContributions from "@/components/githubContributions";
+import CertificationsSection from "@/sections/certifications";
 import { Testimonials } from "@/components/testimonials";
 
 export default async function Home() {
@@ -19,6 +20,7 @@ export default async function Home() {
       <FeaturedProjectsSection />
       <EducationSection />
       <GithubContributions />
+      <CertificationsSection />
       <AchievementsSection />
       <Testimonials />
       <Banner />
