@@ -8,24 +8,22 @@ const AboutSection = () => {
       <div className='p-2 mb-6' style={{ lineHeightStep: "10px"}}>
           <p className='font-sans font-bold text-2xl md:text-3xl mb-2 text-black dark:text-white'>About</p>
           <HeroHighlight className="font-sans font-thin tracking-wide leading-[1.7] text-sm md:text-lg text-black dark:text-white md:max-w-3xl">
-              I am currently majoring{" "}
+              I am a{" "}
               <span className="underline font-semibold">
                   Computer Science
               </span>{" "}
-              at{" "}
+              undergraduate at{" "}
               <Highlight>
                   <a
                       href="https://www.amrita.edu/tag/chennai-campus/"
                       target="_blank"
                       className="text-white dark:text-black font-semibold hover:underline transition-all duration-500"
                   >
-                      Amrita Vishwa Vidhyapeetham.
+                      Amrita Vishwa Vidyapeetham
                   </a>
               </Highlight>
-              <br/>I am currently in my{" "}
-              <span className="underline font-semibold">fourth semester</span>, where I am
-              honing my skills in web development, algorithms, and data structures. I love
-              building fast, scalable web applications and participating in Hackathons.
+              , currently in my{" "}
+              <span className="underline font-semibold">fourth semester</span>. I specialize in web development and core fundamentals such as algorithms and data structures, with a strong focus on building fast, scalable applications. I actively participate in hackathons to apply my skills to real-world problems and continuously improve my problem-solving ability.
           </HeroHighlight>
 
           <div className='mt-4 flex flex-wrap gap-2'>
