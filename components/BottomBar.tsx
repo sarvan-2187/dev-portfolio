@@ -10,9 +10,9 @@ import { ThemeToggle } from "@/app/theme-toggle";
 const navItems = [
     { name: "Home", href: "/", icon: Home },
     { name: "Projects", href: "/projects", icon: Folder },
-    { name: "CLI", href: "/cli", icon: TerminalIcon },
-    { name: "Resume", href: "https://drive.google.com/file/d/1qNhU2jayUuXwZb37r0lfXDFkrFBI4eq4/view?usp=sharing", icon: FileText, external: true },
+    { name: "Resume", href: "/resume/sarvan_kumar.pdf", icon: FileText, external: true },
     { name: "Contact", href: "/contact", icon: Mail },
+    { name: "CLI", href: "/cli", icon: TerminalIcon },
 ];
 
 export default function BottomBar() {
