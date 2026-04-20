@@ -4,13 +4,14 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { Home, Folder, Award, Map, Mail } from "lucide-react";
+import { Home, Folder, Award, Map, Mail, Phone, FileText } from "lucide-react";
 import { ThemeToggle } from "@/app/theme-toggle";
 
 const navItems = [
     { name: "Home", href: "/", icon: Home },
     { name: "Projects", href: "/projects", icon: Folder },
     { name: "Certifications", href: "/certifications", icon: Award },
+    { name: "Resume", href: "https://drive.google.com/file/d/1qNhU2jayUuXwZb37r0lfXDFkrFBI4eq4/view?usp=sharing", icon: FileText, external: true },
     { name: "Contact", href: "/contact", icon: Mail },
 ];
 
@@ -23,13 +24,18 @@ export default function BottomBar() {
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className="flex items-center gap-1 sm:gap-2 px-3 py-2 bg-white/80 dark:bg-black/80 backdrop-blur-lg border border-black/10 dark:border-white/10 rounded-full shadow-2xl"
+                className="flex items-center gap-1 sm:gap-2 px-3 py-2 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-lg border border-black/10 dark:border-white/10 rounded-full shadow-2xl dark:shadow-[0_0_40px_rgba(255,255,255,0.05)] dark:ring-1 dark:ring-white/5"
             >
                 {navItems.map((item) => {
                     const isActive = pathname === item.href;
 
                     return (
-                        <Link key={item.name} href={item.href} className="relative group">
+                        <Link 
+                            key={item.name} 
+                            href={item.href} 
+                            target={item.external ? "_blank" : undefined}
+                            className="relative group"
+                        >
                             <div
                                 className={`flex items-center justify-center p-3 rounded-full transition-all duration-300 ${
                                     isActive
