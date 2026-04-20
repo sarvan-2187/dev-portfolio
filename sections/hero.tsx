@@ -48,7 +48,7 @@ const HeroSection = () => {
               duration: 0.6,
               ease: "easeOut",
             }}
-            className='mt-2 font-medium max-w-xs md:max-w-xl text-xs md:text-xl text-gray-700 dark:text-white/70'>
+            className='mt-2 font-medium max-w-xs md:max-w-xl text-xl md:text-xl text-gray-700 dark:text-white/70'>
             I build reliable, modern web applications with a focus on clarity, performance, and real-world impact.
           </motion.div>
         </div>
