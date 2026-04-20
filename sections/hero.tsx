@@ -29,7 +29,7 @@ const HeroSection = () => {
         ease: "easeOut",
       }}
       className='font-sans flex flex-col gap-6 mt-10 md:mt-12 md:mb-12 '>
-      <div className="flex flex-row items-center justify-between text-white p-2 rounded-lg gap-4 mb-4">
+      <div className="flex flex-row items-center justify-between text-white p-2 rounded-lg gap-4">
         <div className='max-w-2xl font-bold inline flex-col gap-2 text-black dark:text-white font-sans text-2xl md:text-5xl'>
           <EncryptedText text={'Hi I\'m Sarvan Kumar!'}></EncryptedText>
           <motion.div
