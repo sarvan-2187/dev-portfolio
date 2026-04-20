@@ -23,7 +23,7 @@ const AboutSection = () => {
                   </a>
               </Highlight>
               , currently in my{" "}
-              <span className="underline font-semibold">fourth semester</span>. I specialize in web development and core fundamentals such as algorithms and data structures, with a strong focus on building fast, scalable applications. I actively participate in hackathons to apply my skills to real-world problems and continuously improve my problem-solving ability.
+              <span className="underline font-semibold">fifth semester</span> {"(Upcoming)"}. I specialize in web development and core fundamentals such as algorithms and data structures, with a strong focus on building fast, scalable applications. I actively participate in hackathons to apply my skills to real-world problems and continuously improve my problem-solving ability.
           </HeroHighlight>
 
           <div className='mt-4 flex flex-wrap gap-2'>
