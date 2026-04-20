@@ -14,7 +14,6 @@ const techStack = [
   "Algorithms",
   "PostgreSQL",
   "Postman",
-  "Java",
   "Python",
 ];
 
