@@ -9,6 +9,7 @@ import FooterSection from "@/sections/footer";
 import GithubContributions from "@/components/githubContributions";
 import CertificationsSection from "@/sections/certifications";
 import { Testimonials } from "@/components/testimonials";
+import CodolioSection from "@/sections/codolio";
 
 export default async function Home() {
   await new Promise((r) => setTimeout(r, 3000));
@@ -19,6 +20,7 @@ export default async function Home() {
       <ExperienceSection />
       <FeaturedProjectsSection />
       <EducationSection />
+      <CodolioSection />
       <GithubContributions />
       <CertificationsSection />
       <AchievementsSection />
