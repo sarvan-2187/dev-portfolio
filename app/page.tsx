@@ -18,12 +18,12 @@ export default async function Home() {
 
       <HeroSection />
       <ExperienceSection />
+      <AchievementsSection />
       <FeaturedProjectsSection />
-      <EducationSection />
       <CodolioSection />
       <GithubContributions />
       <CertificationsSection />
-      <AchievementsSection />
+      <EducationSection />
       <Testimonials />
       <Banner />
       <FooterSection />
