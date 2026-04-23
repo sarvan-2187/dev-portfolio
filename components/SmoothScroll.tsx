@@ -11,6 +11,22 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
             wheelMultiplier: 1,
         })
 
+        const syncLenisState = () => {
+            if (document.body.dataset.modalOpen === "true") {
+                lenis.stop()
+            } else {
+                lenis.start()
+            }
+        }
+
+        const observer = new MutationObserver(syncLenisState)
+        observer.observe(document.body, {
+            attributes: true,
+            attributeFilter: ["data-modal-open"],
+        })
+
+        syncLenisState()
+
         function raf(time: number) {
             lenis.raf(time)
             requestAnimationFrame(raf)
@@ -19,6 +35,7 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
         requestAnimationFrame(raf)
 
         return () => {
+            observer.disconnect()
             lenis.destroy()
         }
     }, [])

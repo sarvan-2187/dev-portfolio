@@ -4,12 +4,13 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { Home, Folder, Award, Map, Mail, Phone, FileText, Terminal as TerminalIcon } from "lucide-react";
+import { Home, Folder, Mail, FileText, BookOpenText, Terminal as TerminalIcon } from "lucide-react";
 import { ThemeToggle } from "@/app/theme-toggle";
 
 const navItems = [
     { name: "Home", href: "/", icon: Home },
     { name: "Projects", href: "/projects", icon: Folder },
+    { name: "Blogs", href: "/blogs", icon: BookOpenText },
     { name: "Resume", href: "/resume/sarvan_kumar.pdf", icon: FileText, external: true },
     { name: "Contact", href: "/contact", icon: Mail },
     { name: "CLI", href: "/cli", icon: TerminalIcon },
