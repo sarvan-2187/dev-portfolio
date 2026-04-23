@@ -18,7 +18,7 @@ const GithubContributions = () => {
     );
 
     return (
-        <div className="p-2 my-4">
+        <div>
             <div className="flex items-center justify-between mb-4">
                 <h2 className="font-sans font-bold text-2xl md:text-3xl text-black dark:text-white">
                     GitHub Contributions

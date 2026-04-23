@@ -14,19 +14,21 @@ import CodolioSection from "@/sections/codolio";
 export default async function Home() {
   await new Promise((r) => setTimeout(r, 3000));
   return (
-    <div className="px-4 lg:px-58">
+    <div className="px-4 py-8 md:py-10 lg:px-58">
+      <div className="space-y-7 md:space-y-9 *:px-2">
 
-      <HeroSection />
-      <ExperienceSection />
-      <AchievementsSection />
-      <FeaturedProjectsSection />
-      <CodolioSection />
-      <GithubContributions />
-      <CertificationsSection />
-      <EducationSection />
-      <Testimonials />
-      <Banner />
-      <FooterSection />
+        <HeroSection />
+        <ExperienceSection />
+        <AchievementsSection />
+        <FeaturedProjectsSection />
+        <CodolioSection />
+        <GithubContributions />
+        <CertificationsSection />
+        <EducationSection />
+        <Testimonials />
+        <Banner />
+        <FooterSection />
+      </div>
     </div>
   );
 }

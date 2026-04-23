@@ -66,7 +66,7 @@ const AchievementsSection = () => {
     const [activeTab, setActiveTab] = useState<TabType>("Technical");
 
     return (
-        <div className='p-2 font-sans mb-8'>
+        <div className='font-sans'>
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6">
                 <p className='font-bold text-2xl md:text-3xl text-black dark:text-white mb-4 sm:mb-0'>
                     Achievements

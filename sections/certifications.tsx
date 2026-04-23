@@ -8,6 +8,12 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const CERTIFICATIONS = [
   {
+    title: "Claude Code in Action",
+    image: "https://ik.imagekit.io/sarvan/Portfolio/claude-color.webp",
+    subtitle: "From Anthropic • Issued Mar 2026",
+    link: "https://verify.skilljar.com/c/nt57hc854bur",
+  },
+  {
     title: "Gemini for University Students",
     image: "https://ik.imagekit.io/sarvan/Portfolio/gemini.webp",
     subtitle: "From Google • Expires Dec 2028",
@@ -44,7 +50,7 @@ const CertificationsSection = () => {
     const displayedCerts = isExpanded ? CERTIFICATIONS : CERTIFICATIONS.slice(0, 3);
 
     return (
-        <section className="font-sans my-8 p-2">
+        <section className="font-sans">
             <h2 className="text-2xl md:text-3xl mb-6 font-bold text-black dark:text-white">
                 Certifications
             </h2>

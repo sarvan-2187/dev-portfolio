@@ -33,7 +33,7 @@ const FooterSection = () => {
     };
 
     return (
-        <footer className="font-sans border-t border-black/10 dark:border-white/5 mt-16 px-2">
+        <footer className="font-sans border-t border-black/10 dark:border-white/5">
             <motion.div
                 initial="hidden"
                 whileInView="visible"

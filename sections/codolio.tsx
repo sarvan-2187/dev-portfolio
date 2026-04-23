@@ -10,7 +10,6 @@ const CodolioSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="p-2 mb-8"
         >
             <p className='font-sans font-bold text-2xl mb-4 md:text-3xl text-black dark:text-white'>
                 Unified Coding Portfolio

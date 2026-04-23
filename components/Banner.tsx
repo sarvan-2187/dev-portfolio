@@ -9,7 +9,7 @@ const words =
 
 export function Banner() {
     return (
-        <div className="p-2 mb-8">
+        <div>
             <span className="text-3xl"><FaQuoteLeft /></span>
             <TextGenerateEffect
                 words={words}
