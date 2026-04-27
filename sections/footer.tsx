@@ -45,16 +45,16 @@ const FooterSection = () => {
                         <SubscribeFooterInput />
                     </motion.div>
                 </div> */}
-            
+
                 <div className="py-8 rounded-2xl">
-                    <motion.div 
+                    <motion.div
                         variants={itemVariants}
-                        className="flex items-center gap-2 mb-8 text-2xl md:text-3xl font-bold"
+                        className="flex font-serif items-center gap-2 mb-8 text-2xl md:text-3xl font-bold"
                     >
                         Thank you for visiting<FaRegFaceSmileBeam className="ml-2 text-2xl md:text-3xl" />
                     </motion.div>
-    
-                    <motion.div 
+
+                    <motion.div
                         variants={itemVariants}
                         className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm"
                     >
@@ -70,16 +70,16 @@ const FooterSection = () => {
                                 </span>
                             </div>
                         </div>
-    
-                        <motion.div 
+
+                        <motion.div
                             variants={itemVariants}
                             className="flex flex-col justify-end md:items-end items-start gap-1 text-xs text-gray-600 dark:text-gray-400"
                         >
                             <span>Built with Next.js & Tailwind CSS</span>
                         </motion.div>
                     </motion.div>
-                    
-                    <motion.div 
+
+                    <motion.div
                         variants={itemVariants}
                         className="py-8 flex flex-row flex-wrap items-center justify-center gap-3"
                     >
@@ -94,7 +94,7 @@ const FooterSection = () => {
                                 </a>
                             </Button>
                         </motion.div>
-    
+
                         <motion.div
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.98 }}

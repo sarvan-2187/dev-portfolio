@@ -23,8 +23,9 @@ export function Testimonials() {
                 duration: 0.6,
                 ease: "easeOut",
             }}
+            className="py-8"
         >
-            <h2 className='font-sans font-bold text-2xl mb-2 text-black dark:text-white'>Testimonials</h2>
+            <h2 className='font-serif font-bold text-2xl md:text-3xl mb-2 text-black dark:text-white'>Testimonials</h2>
             <div className="font-sans rounded-md flex flex-col antialiased dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
                 <InfiniteMovingCards
                     items={testimonials}

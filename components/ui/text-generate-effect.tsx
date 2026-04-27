@@ -51,7 +51,7 @@ export const TextGenerateEffect = ({
               <motion.span
                 key={word + idx}
                 className={cn(
-                  "inline-block font-sans text-lg opacity-0",
+                  "inline-block opacity-0",
                   isHighlighted &&
                   "text-blue-600 dark:text-blue-400 font-semibold"
                 )}

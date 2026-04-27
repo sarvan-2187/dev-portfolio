@@ -13,22 +13,21 @@ const ACHIEVEMENTS = {
             linkUrl: "https://github.com/sarvan-2187/delta-build",
         },
         {
-            title: "Runners Up in Code of Caribbean",
+            title: "Second in Code of Caribbean",
             subtitle: "Event • Mar 2026",
             description: "Cleared all the three rounds and secured the 2nd position.",
             linkText: "View Github",
             linkUrl: "https://github.com/sarvan-2187/code-of-caribbean",
         },
         {
-            title: "Top 20 in Suprathon",
+            title: "Top 20 in Suprathon Hackathon",
             subtitle: "Hackathon • Jul 2025",
             description: "Presented my idea Aarogya AI, a one-stop solution for AI based Health Care in India.",
             linkText: "View Certificate",
             linkUrl: "https://drive.google.com/file/d/1Iv8_6W9TdRom5l0WWjGZKItG5t5HLifE/view",
         },
         {
-            title: "Flash 2K25",
-            highlight: "(1st Hackathon Win!)",
+            title: "Winners in Flash Hackathon",
             subtitle: "Hackathon • Jan 2025",
             description: "Developed Pill-Pal, a web application designed to provide medication reminders for elderly users.",
             linkText: "View Certificate",
@@ -68,19 +67,18 @@ const AchievementsSection = () => {
     return (
         <div className='font-sans'>
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6">
-                <p className='font-bold text-2xl md:text-3xl text-black dark:text-white mb-4 sm:mb-0'>
+                <p className='font-bold font-serif text-2xl md:text-3xl text-black dark:text-white mb-4 sm:mb-0'>
                     Achievements
                 </p>
-                <div className="flex p-1 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/10 w-fit">
+                <div className="flex font-serif p-1 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/10 w-fit">
                     {(["Technical", "Academic"] as TabType[]).map((tab) => (
                         <button
                             key={tab}
                             onClick={() => setActiveTab(tab)}
-                            className={`px-4 py-1.5 rounded-md text-sm font-medium transition-all ${
-                                activeTab === tab
-                                    ? "bg-white dark:bg-[#1a1a1a] text-black dark:text-white shadow-sm border border-black/10 dark:border-white/10"
-                                    : "text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white"
-                            }`}
+                            className={`px-4 py-1.5 rounded-md font-bold text-sm transition-all ${activeTab === tab
+                                    ? "bg-white dark:bg-[#1a1a1a] font-extrabold text-black dark:text-white shadow-sm border border-black/10 dark:border-white/10"
+                                    : "text-black/60 dark:text-white/60 font-bold hover:text-black dark:hover:text-white"
+                                }`}
                         >
                             {tab}
                         </button>

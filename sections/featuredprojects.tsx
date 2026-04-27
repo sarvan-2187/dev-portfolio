@@ -2,8 +2,8 @@ import ProjectCard from "@/components/ProjectCard";
 
 const FeaturedProjectsSection = () => {
     return (
-        <div className="font-sans">
-            <h2 className="font-bold text-2xl md:text-3xl mb-4 text-black dark:text-white">
+        <div className="font-sans py-8">
+            <h2 className="font-serif font-bold text-2xl md:text-3xl mb-4 text-black dark:text-white">
                 Featured Projects
             </h2>
 

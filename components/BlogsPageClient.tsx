@@ -37,15 +37,10 @@ const BlogsPageClient = ({ blogs }: BlogsPageClientProps) => {
     >
       <main className="my-4 p-2">
         <StaggerTitle
-          text="<My_Blogs/>"
-          className="mb-4 text-center text-3xl font-bold md:text-4xl"
+          text="My Blogs"
+          className="mb-12 text-center text-3xl font-serif font-bold md:text-4xl"
         />
-        <TextGenerateEffect
-          words="Check out my blogs"
-          highlight="blogs"
-          className="mb-6 text-center font-medium tracking-tighter text-gray-600 dark:text-white/70"
-        />
-
+        
         {blogs.length === 0 ? (
           <div className="mt-8 rounded-2xl border border-dashed border-border p-8 text-sm text-muted-foreground">
             No blogs found yet. Add a markdown file inside public/blogs (example: blogone.md), and it will appear here automatically.

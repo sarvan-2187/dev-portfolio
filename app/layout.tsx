@@ -1,19 +1,14 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Google_Sans, JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono, Metrophobic, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "@/components/ui/sonner";
 import SmoothScroll from "@/components/SmoothScroll";
 import RouteLoader from "@/components/RouteLoader";
 
-const bebasNeue = Bebas_Neue({
+const playfairDisplay = Playfair_Display({
   variable: "--font-bebas-neue",
   weight: "400",
-  subsets: ["latin"],
-});
-
-const googleSans = Google_Sans({
-  variable: "--font-google-sans",
   subsets: ["latin"],
 });
 
@@ -21,6 +16,12 @@ const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
   subsets: ["latin"],
 });
+
+const metrophobicSans = Metrophobic({
+  variable: "--font-metrophobic-sans",
+  weight: "400",
+  subsets: ["latin"],
+})
 
 export const metadata: Metadata = {
   title: "Sarvan Kumar's Portfolio",
@@ -42,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body
-        className={`${bebasNeue.variable} ${googleSans.variable} ${jetBrainsMono.variable} antialiased`}
+        className={`${playfairDisplay.variable} ${metrophobicSans.variable} ${jetBrainsMono.variable} antialiased`}
       >
         <ThemeProvider attribute="class" defaultTheme="light">
           <RouteLoader>

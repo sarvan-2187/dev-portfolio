@@ -9,14 +9,14 @@ const words =
 
 export function Banner() {
     return (
-        <div>
-            <span className="text-3xl"><FaQuoteLeft /></span>
+        <div className="py-8">
+            <span className="text-4xl"><FaQuoteLeft /></span>
             <TextGenerateEffect
                 words={words}
                 highlight="Hardik Pandya"
-                className="tracking-wide leading-snug"
+                className="font-serif text-2xl md:text-3xl tracking-wide leading-snug"
             />
-            <span className="flex justify-end text-3xl"><FaQuoteRight /></span>
+            <span className="flex justify-end text-4xl"><FaQuoteRight /></span>
         </div>
     );
 }

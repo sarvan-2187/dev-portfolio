@@ -12,10 +12,9 @@ const ProjectsSection = () => {
     <div
       className='font-sans my-4 p-2'>
             <StaggerTitle
-                          text="<My_Works/>"
-                          className="text-3xl md:text-4xl mb-4 font-bold text-center"
+                          text="My Works"
+                          className="font-serif text-3xl md:text-4xl mb-12   font-bold text-center"
             />
-              <TextGenerateEffect words="Check out my projects" highlight='projects' className="font-medium text-center mb-6 text-gray-600 tracking-tighter" />
             
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-4">
         

@@ -9,13 +9,13 @@ import { FaMediumM } from "react-icons/fa";
 
 const Socials = () => {
   return (
-      <div className='px-2'>
-          <p className='font-sans font-bold text-2xl mb-2 md:text-3xl text-black dark:text-white'>Socials</p>
+    <div>
+      <p className='font-serif font-bold text-2xl mb-2 md:text-3xl text-black dark:text-white'>Socials</p>
       <div className='flex flex-wrap gap-2'>
         <LinkPreview url='https://ik.imagekit.io/sarvan/Portfolio/linkedin_dark.png' quality={100}>
-            <a href="https://www.linkedin.com/in/nagarampalli-sarvan-kumar/" target="_blank" className='text-5xl text-blue-500 dark:text-blue-600 hover:scale-90 transition-all duration-300 mr-2'>
-              <FaLinkedin />
-        </a>
+          <a href="https://www.linkedin.com/in/nagarampalli-sarvan-kumar/" target="_blank" className='text-5xl text-blue-500 hover:scale-90 transition-all duration-300 mr-2'>
+            <FaLinkedin />
+          </a>
         </LinkPreview>
         {/* <LinkPreview url='https://ik.imagekit.io/sarvan/Portfolio/insta_dark.jpeg' quality={100}>
           <a
@@ -48,22 +48,22 @@ const Socials = () => {
           </a>
         </LinkPreview> */}
         <LinkPreview url='https://ik.imagekit.io/sarvan/Portfolio/x_dark.png' quality={100}>
-            <a href="https://x.com/SarvanKumar2187" target="_blank" className='text-5xl text-black dark:text-gray-200 hover:scale-90 transition-all duration-300 mr-2'> 
-                <FaSquareXTwitter />
+          <a href="https://x.com/SarvanKumar2187" target="_blank" className='text-5xl text-black dark:text-gray-200 hover:scale-90 transition-all duration-300 mr-2'>
+            <FaSquareXTwitter />
           </a>
         </LinkPreview>
         <LinkPreview url='https://ik.imagekit.io/sarvan/Portfolio/github_dark.png' quality={100}>
-            <a href="https://github.com/sarvan-2187" target="_blank" className='text-5xl text-gray-800 dark:text-gray-200 hover:scale-90 transition-all duration-300 mr-2'>
-                <FaGithubSquare />
+          <a href="https://github.com/sarvan-2187" target="_blank" className='text-5xl text-gray-800 dark:text-gray-200 hover:scale-90 transition-all duration-300 mr-2'>
+            <FaGithubSquare />
           </a>
         </LinkPreview>
         <LinkPreview url='https://ik.imagekit.io/sarvan/Portfolio/medium_dark_profile.png' quality={100}>
           <a href="https://medium.com/@sarvankumarnagarampalli478" target="_blank" className='text-5xl text-black dark:text-white hover:scale-90 transition-all duration-300 mr-2'>
-                <FaMediumM />
+            <FaMediumM />
           </a>
         </LinkPreview>
-          </div>
       </div>
+    </div>
   )
 }
 

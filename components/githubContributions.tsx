@@ -19,18 +19,18 @@ const GithubContributions = () => {
 
     return (
         <div>
-            <div className="flex items-center justify-between mb-4">
-                <h2 className="font-sans font-bold text-2xl md:text-3xl text-black dark:text-white">
+            <div className="flex py-8 items-center justify-between">
+                <h2 className="font-serif font-bold text-2xl md:text-3xl text-black dark:text-white">
                     GitHub Contributions
                 </h2>
                 <select
                     value={year}
                     onChange={(e) => setYear(Number(e.target.value))}
-                    className="cursor-pointer font-sans rounded-lg p-2 border text-sm bg-white text-black
+                    className="cursor-pointer font-serif font-bold rounded-lg p-2 border text-sm bg-white text-black
                                dark:bg-black dark:text-white dark:border-gray-700"
                 >
                     {years.map((y) => (
-                        <option className="cursor-pointer font-sans" key={y} value={y}>
+                        <option className="cursor-pointer font-serif font-bold" key={y} value={y}>
                             {y}
                         </option>
                     ))}

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function CLIPage() {
   return (
-    <main className="fixed inset-0 bg-white dark:bg-black flex flex-col items-center justify-start overflow-hidden pt-8 md:pt-12">
+    <main className="fixed inset-0 bg-white dark:bg-black flex flex-col items-center justify-start overflow-hidden pt-8 md:pt-8">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -13,7 +13,7 @@ export default function CLIPage() {
         className="w-full max-w-5xl mx-auto px-4"
       >
         <div className="mb-6 text-center">
-          <h1 className="text-3xl md:text-5xl font-bold font-sans text-black dark:text-white">
+          <h1 className="text-3xl md:text-4xl font-bold font-serif text-black dark:text-white">
             Terminal Mode
           </h1>
         </div>

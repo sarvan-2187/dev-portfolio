@@ -10,7 +10,7 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 const CONTACT_LINKS = [
     { icon: LuMail, label: "Email", value: "sarvankumarnagarampalli478@gmail.com", href: "mailto:sarvankumarnagarampalli478@gmail.com" },
-    { icon: LuMapPin, label: "Location", value: "Andhra Pradesh, India" },
+    { icon: LuMapPin, label: "Location", value: "Chennai, India" },
     { icon: LuGithub, label: "GitHub", value: "sarvan-2187", href: "https://github.com/sarvan-2187" },
     { icon: LuLinkedin, label: "LinkedIn", value: "nagarampalli-sarvan-kumar", href: "https://linkedin.com/in/nagarampalli-sarvan-kumar" },
 ];
@@ -89,14 +89,13 @@ export default function ContactPage() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="font-sans px-4 lg:px-58"
         >
-            <div className="p-2 mt-10 md:mt-6">
+            <div className="p-2 mt-4 md:mt-4">
                 {/* Section title */}
-                <div className="mt-4">
+                <div className="">
                     <StaggerTitle
-                        text="<Contact_Me/>"
-                        className="text-3xl md:text-4xl mb-4 font-bold text-center"
+                        text="Contact Me"
+                        className="font-serif text-3xl md:text-4xl mb-8 font-bold text-center"
                     />
-                    <TextGenerateEffect words="Have a project in mind or want to collaborate? Drop me a message." highlight="collaborate?" className="font-medium text-center mb-8 text-gray-600 tracking-tighter" />
                 </div>
 
                 {/* Contact info cards */}

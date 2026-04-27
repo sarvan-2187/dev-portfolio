@@ -14,7 +14,7 @@ const LoadingScreen: React.FC = () => {
     >
       <div className="flex flex-col items-center gap-4">
         <Shuffle 
-          text="LOADING" 
+          text="Loading" 
           shuffleDirection="up" 
           duration={0.5} 
           stagger={0.1}
@@ -22,7 +22,7 @@ const LoadingScreen: React.FC = () => {
           loop={true}
           loopDelay={0.2}
           className="text-4xl md:text-6xl tracking-tighter"
-          style={{ fontFamily: "'Sekuya', sans-serif" }}
+          style={{ fontFamily: "var(--font-metrophobic-sans)"}}
         />
         <div className="w-48 h-[2px] bg-neutral-200 dark:bg-neutral-800 overflow-hidden relative">
           <div className="absolute inset-0 bg-black dark:bg-white animate-loading-progress origin-left" />

@@ -1,13 +1,13 @@
 "use client";
 
-import ExperienceCard from "@/components/ExperienceCard";
+import ExperienceTimeline from "@/components/ExperienceTimeline";
 
 const EXPERIENCES = [
     {
         logo: "https://ik.imagekit.io/sarvan/Portfolio/avv-logo.png",
         alt: "Amrita Tantrotsav Logo",
-        role: "Frontend Dev & Platform Ops",
-        subtitle: "Tantrotsav 2026 • Dec 2025 - Feb 2025",
+        role: "MERN Stack Developer",
+        subtitle: "Tantrotsav 2026 • Dec 2024 - Feb 2025",
         linkText: "View Website",
         linkUrl: "https://tantrotsav.amrita.edu/",
         bullets: [
@@ -24,7 +24,7 @@ const EXPERIENCES = [
         logo: "https://ik.imagekit.io/sarvan/Portfolio/nueronix.png",
         alt: "Neuronix Logo",
         role: "Coordinator",
-        subtitle: "Neuronix Club • Jun 2025 - Present",
+        subtitle: "Neuronix Club • Jun 2024 - Present",
         linkText: "View Website",
         linkUrl: "https://neuronix-avv.vercel.app/",
         bullets: [
@@ -40,16 +40,13 @@ const EXPERIENCES = [
 
 const ExperienceSection = () => {
     return (
-        <div>
-            <p className='font-sans font-bold text-2xl mb-4 md:text-3xl text-black dark:text-white'>Work Experience</p>
-            <div className='space-y-4'>
-                {EXPERIENCES.map((exp) => (
-                    <ExperienceCard key={exp.role} {...exp} />
-                ))}
+        <div className="p-2">
+            <p className='font-serif font-bold text-2xl mb-8 md:text-3xl text-black dark:text-white'>Work Experience</p>
 
-                <div className='font-sans font-semibold'>
-                    Also, <span className='text-blue-600 dark:text-blue-300'>I am currently open to internship opportunities in web development</span>. If you have an exciting role that matches my skills, please feel free to reach out!
-                </div>
+            <ExperienceTimeline experiences={EXPERIENCES} />
+
+            <div className='mt-12 font-sans font-semibold text-center md:text-left text-gray-700 dark:text-gray-300'>
+                Also, <span>I am currently open to internship opportunities in web development</span>. If you have an exciting role that matches my skills, please feel free to reach out!
             </div>
         </div>
     );

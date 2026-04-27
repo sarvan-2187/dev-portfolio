@@ -6,9 +6,6 @@ import AboutSection from './about';
 import Socials from './socials';
 import { EncryptedText } from '@/components/ui/encrypted-text';
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Eye } from 'lucide-react';
-import { MdCall } from 'react-icons/md';
 
 const HeroSection = () => {
   return (
@@ -28,10 +25,10 @@ const HeroSection = () => {
         duration: 0.6,
         ease: "easeOut",
       }}
-      className='font-sans flex flex-col gap-6'>
-      <div className="flex flex-row items-center justify-between text-white p-2 rounded-lg gap-4">
+      className='font-sans flex flex-col gap-2'>
+      <div className="flex flex-row items-center justify-between text-white rounded-lg gap-4">
         <div className='max-w-2xl font-bold inline flex-col gap-2 text-black dark:text-white font-sans text-2xl md:text-5xl'>
-          <EncryptedText text={'Hi I\'m Sarvan Kumar!'}></EncryptedText>
+          <EncryptedText className="font-serif tracking-wide" text={'Hi I\'m Sarvan Kumar!'}></EncryptedText>
           <motion.div
             initial={{
               opacity: 0,
@@ -68,17 +65,17 @@ const HeroSection = () => {
             duration: 0.6,
             ease: "easeOut",
           }}
-          className='flex items-center justify-center rounded-md'>
-          <Image src="https://ik.imagekit.io/sarvan/Portfolio/sarvan.png" alt="Profile Picture" width={150} height={150} className="hidden md:block rounded-xl" draggable={false} />
-          <Image src="https://ik.imagekit.io/sarvan/Portfolio/sarvan.png" alt="Profile Picture" width={120} height={120} className="block md:hidden rounded-xl" draggable={false} />
+          className='flex items-center justify-center rounded-xl shadow-2xl'>
+          <Image src="https://ik.imagekit.io/sarvan/Portfolio/sarvan.png" alt="Profile Picture" width={160} height={160} className="hidden md:block rounded-xl" draggable={false} />
+          <Image src="https://ik.imagekit.io/sarvan/Portfolio/sarvan.png" alt="Profile Picture" width={125} height={125} className="block md:hidden rounded-xl" draggable={false} />
         </motion.div>
       </div>
 
-      <AboutSection />
-      <div className='flex flex-col md:flex-row items-start gap-8 mb-6 justify-start md:justify-between'>
-        <SkillComponent />
+      <div className='mt-6 flex flex-col md:flex-row items-start gap-8 justify-start md:justify-between'>
+        <AboutSection />
         <Socials />
       </div>
+      <SkillComponent />
     </motion.div>
   )
 }
