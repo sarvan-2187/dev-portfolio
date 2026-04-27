@@ -59,7 +59,7 @@ const GithubContributions = () => {
                     year={year}
                     fontSize={14}
                     style={{
-                        fontFamily: "Google Sans",
+                        fontFamily: "var(--font-sans)",
                     }}
                     colorScheme={isDark ? "dark" : "light"}
                     theme={{
