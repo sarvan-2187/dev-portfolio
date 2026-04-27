@@ -27,7 +27,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
       position="top-center"
       style={
         {
-          fontFamily:"Google Sans, sans-serif",
+          fontFamily:"var(--font-metrophobic-sans)",
           "--normal-bg": "var(--popover)",
           "--normal-text": "var(--popover-foreground)",
           "--normal-border": "var(--border)",
