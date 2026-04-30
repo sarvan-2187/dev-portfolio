@@ -172,9 +172,9 @@ export function InteractiveTerminal() {
 
   return (
     <div 
-      className="mx-auto w-full max-w-5xl font-mono text-sm h-[75vh] flex flex-col"
+      className="mx-auto w-full max-w-5xl font-mono text-sm h-[70vh] flex flex-col"
     >
-      <div className="flex-1 overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900/95 backdrop-blur-sm shadow-[0_0_50px_rgba(0,0,0,0.5)] flex flex-col">
+      <div className="flex-1 overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900/95 backdrop-blur-sm flex flex-col">
         {/* Title Bar */}
         <div className="flex items-center gap-2 bg-neutral-800 px-4 py-3 shrink-0">
           <div className="flex items-center gap-1.5">
@@ -184,7 +184,7 @@ export function InteractiveTerminal() {
           </div>
           <div className="flex-1 text-center">
             <span className="truncate text-xs text-neutral-400">
-              sarvan — zsh
+              Terminal
             </span>
           </div>
         </div>
