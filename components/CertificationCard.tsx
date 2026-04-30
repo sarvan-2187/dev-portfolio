@@ -23,7 +23,7 @@ export default function CertificationCard({
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="bg-[#ffffff] dark:bg-black dark:outline dark:outline-1 flex items-start gap-4 p-4 rounded-lg shadow-lg"
+            className="bg-[#ffffff] dark:bg-black outline outline-1 flex items-start gap-4 p-4 rounded-lg"
         >
             <div className="w-[48px] h-[48px] flex-shrink-0 rounded-full border-4 border-slate-100 bg-slate-200 dark:bg-[#2f2f2f] dark:border-[#1f1f1f] p-1 flex items-center justify-center">
                 <Image src={image} alt={`${title} Logo`} width={50} height={50} className="object-contain rounded-full" draggable={false} />
