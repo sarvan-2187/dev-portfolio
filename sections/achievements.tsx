@@ -20,7 +20,7 @@ const ACHIEVEMENTS = {
             linkUrl: "https://github.com/sarvan-2187/code-of-caribbean",
         },
         {
-            title: "Top 20 in Suprathon Hackathon",
+            title: "Top 20 in Suprathon",
             subtitle: "Hackathon • Jul 2025",
             description: "Presented my idea Aarogya AI, a one-stop solution for AI based Health Care in India.",
             linkText: "View Certificate",
