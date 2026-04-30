@@ -53,6 +53,7 @@ const COMMAND_DATA: Record<string, CommandResponse> = {
   projects: {
     type: "link",
     content: [
+      { label: "Tantrotsav", url: "https://tantrotsav.amrita.edu/" },
       { label: "Savynce - Price Tracker", url: "https://savynce-price-drop-tracker.vercel.app/" },
       { label: "Stumps & Stories - Cricket Newsletter", url: "https://stumps-and-stories.vercel.app/" },
       { label: "Networq - Video Conferencing", url: "https://project-networq.vercel.app/" },
