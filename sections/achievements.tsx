@@ -10,7 +10,7 @@ const ACHIEVEMENTS = {
             subtitle: "Hackathon • Apr 2026",
             description: "Developed FinShield, a web application designed to analyze loan agreements and help users understand hidden charges and risks.",
             linkText: "View Github",
-            linkUrl: "https://github.com/sarvan-2187/delta-build",
+            linkUrl: "https://github.com/sarvan-2187/finshield-ai",
         },
         {
             title: "Second in Code of Caribbean",
