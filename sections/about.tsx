@@ -2,6 +2,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { IoMdTime } from "react-icons/io";
 import ISTClock from "@/components/Clock";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
+import { User } from "lucide-react";
 
 const AboutSection = () => {
     return (
@@ -26,13 +27,13 @@ const AboutSection = () => {
             </HeroHighlight>
 
             <div className='mt-4 flex flex-wrap gap-2'>
-                <div className='bg-white dark:bg-black dark:outline dark:outline-1 dark:text-white text-xs p-2 text-center rounded-2xl w-fit shadow-lg font-sans font-medium text-black'>
-                    19Yr Old
+                <div className='bg-white dark:bg-black outline outline-1 dark:text-white text-xs p-2 text-center rounded-xl w-fit font-sans font-medium text-black'>
+                    <User className="text-xs inline mb-1" size={'12'} /> 19Yr Old
                 </div>
-                <div className='bg-white dark:bg-black dark:outline dark:outline-1 dark:text-white text-xs p-2 text-center rounded-2xl w-fit shadow-lg font-sans font-medium text-black'>
+                <div className='bg-white dark:bg-black outline outline-1 dark:text-white text-xs p-2 text-center rounded-xl w-fit font-sans font-medium text-black'>
                     <FaLocationDot className="text-xs inline mb-1" /> Chennai, India
                 </div>
-                <div className='bg-white dark:bg-black dark:outline dark:outline-1 dark:text-white text-xs p-2 text-center rounded-2xl w-fit shadow-lg font-sans font-medium text-black'>
+                <div className='bg-white dark:bg-black outline outline-1 dark:text-white text-xs p-2 text-center rounded-xl w-fit font-sans font-medium text-black'>
                     <IoMdTime className="text-xs inline mb-1" /> <ISTClock />
                 </div>
             </div>
