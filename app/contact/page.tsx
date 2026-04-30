@@ -106,7 +106,7 @@ export default function ContactPage() {
                             href={item.href}
                             target={item.href?.startsWith("http") ? "_blank" : undefined}
                             rel="noopener noreferrer"
-                            className={`bg-[#ffffff] dark:bg-black dark:outline dark:outline-1 flex items-center gap-3 p-4 rounded-lg shadow-lg ${item.href ? "hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors cursor-pointer" : "cursor-default"}`}
+                            className={`bg-[#ffffff] dark:bg-black dark:outline dark:outline-1 flex items-center gap-3 p-4 rounded-lg outline outline-1 ${item.href ? "hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors cursor-pointer" : "cursor-default"}`}
                         >
                             <div className="w-10 h-10 flex-shrink-0 rounded-full bg-slate-100 dark:bg-[#2f2f2f] flex items-center justify-center">
                                 <item.icon className="w-4 h-4 text-black dark:text-white" />
@@ -120,7 +120,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Form */}
-                <div className="bg-[#ffffff] dark:bg-black dark:outline dark:outline-1 rounded-lg shadow-lg p-6">
+                <div className="bg-[#ffffff] dark:bg-black outline outline-1 rounded-lg p-6">
                     <p className="font-bold text-lg mb-6 text-black dark:text-white">Send a Message</p>
 
                     <form onSubmit={handleSubmit} className="space-y-6">

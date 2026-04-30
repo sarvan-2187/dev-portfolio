@@ -17,15 +17,15 @@ export default async function Home() {
     <div className="px-4 py-8 md:py-8 lg:px-58">
       <div className="space-y-7 md:space-y-9 *:px-2">
         <HeroSection />
-        <ExperienceSection />
-        <AchievementsSection />
         <FeaturedProjectsSection />
+        <ExperienceSection />
         <CodolioSection />
         <GithubContributions />
+        <AchievementsSection />
         <CertificationsSection />
         <EducationSection />
         <Testimonials />
-        <Banner />
+        <Banner/>
         <FooterSection />
       </div>
     </div>

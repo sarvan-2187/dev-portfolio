@@ -9,10 +9,9 @@ const FeaturedProjectsSection = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <ProjectCard
-                    title="Stumps & Stories"
-                    image="https://ik.imagekit.io/sarvan/Portfolio/og.png"
-                    link="https://stumps-and-stories.vercel.app/"
-                    github="https://github.com/sarvan-2187/stumps_and_stories"
+                    title="Tantrotsav"
+                    image="https://ik.imagekit.io/sarvan/Portfolio/tantrotsasv.png?updatedAt=1776928496822"
+                    link="https://tantrotsav.amrita.edu"
                 />
                 <ProjectCard
                     title="Savynce"

@@ -17,7 +17,12 @@ const ProjectsSection = () => {
             />
             
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-4">
-        
+            <ProjectCardDetailed
+              title="Tantrotsav"
+          description="Tantrotsav is a MERN stack-based event management web application enabling secure registrations, real-time data handling, payment integration, and scalable fest operations for 3,500+ participants."
+          image="https://ik.imagekit.io/sarvan/Portfolio/tantrotsasv.png?updatedAt=1776928496822"
+              link="https://tantrotsav.amrita.edu"
+            />
               <ProjectCardDetailed
                 title="Savynce"
                 description="Savynce is a Next.js App Router-based price tracking web application that integrates Supabase (Auth + PostgreSQL), Firecrawl for scraping, and Nodemailer for automated alerts."

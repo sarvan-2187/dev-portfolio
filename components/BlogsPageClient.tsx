@@ -56,7 +56,7 @@ const BlogsPageClient = ({ blogs }: BlogsPageClientProps) => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.35, delay: index * 0.05 }}
                 onClick={() => setActivePost(post)}
-                className="rounded-lg border border-slate-200 bg-[#ffffff] p-5 text-left shadow-lg dark:border-[#1f1f1f] dark:bg-black dark:outline"
+                className="rounded-lg border border-slate-200 bg-[#ffffff] p-5 text-left outline outline-1 dark:border-[#1f1f1f] dark:bg-black dark:outline"
               >
                   <p className="text-xs uppercase tracking-[0.2em] text-gray-700 dark:text-white/70">
                   {new Date(post.date).toLocaleDateString("en-US", {

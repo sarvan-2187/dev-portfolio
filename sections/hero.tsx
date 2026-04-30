@@ -7,6 +7,8 @@ import Socials from './socials';
 import { EncryptedText } from '@/components/ui/encrypted-text';
 import { motion } from 'framer-motion';
 
+import { VscVerifiedFilled } from "react-icons/vsc";
+
 const HeroSection = () => {
   return (
     <motion.div
@@ -27,8 +29,11 @@ const HeroSection = () => {
       }}
       className='font-sans flex flex-col gap-2'>
       <div className="flex flex-row items-center justify-between text-white rounded-lg gap-4">
-        <div className='max-w-2xl font-bold inline flex-col gap-2 text-black dark:text-white font-sans text-2xl md:text-5xl'>
-          <EncryptedText className="font-serif tracking-wide" text={'Hi I\'m Sarvan Kumar!'}></EncryptedText>
+        <div className='max-w-2xl font-bold flex flex-col gap-2 text-black dark:text-white font-sans text-2xl md:text-5xl'>
+          <div className='flex items-center gap-2'>
+            <EncryptedText className="font-serif tracking-wide" text={'Hi I\'m Sarvan!'}></EncryptedText>
+            <VscVerifiedFilled className="text-blue-500 size-6 md:size-10" />
+          </div>
           <motion.div
             initial={{
               opacity: 0,
@@ -65,7 +70,7 @@ const HeroSection = () => {
             duration: 0.6,
             ease: "easeOut",
           }}
-          className='flex items-center justify-center rounded-xl shadow-2xl'>
+          className='flex items-center justify-center rounded-xl'>
           <Image src="https://ik.imagekit.io/sarvan/Portfolio/sarvan.png" alt="Profile Picture" width={160} height={160} className="hidden md:block rounded-xl" draggable={false} />
           <Image src="https://ik.imagekit.io/sarvan/Portfolio/sarvan.png" alt="Profile Picture" width={125} height={125} className="block md:hidden rounded-xl" draggable={false} />
         </motion.div>
